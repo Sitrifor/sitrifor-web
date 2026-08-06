@@ -2,6 +2,11 @@
 
 Независимый проект на сервере: лендинг + задел под API для тату-мастеров (iOS / Android / Huawei).
 
+## Документация в репо
+- Сайт / ops: [`docs/kb/`](docs/kb/), [`docs/ops/`](docs/ops/)
+- **Приложение 634** (продукт, фичи, правила для агентов): [`docs/app-634/`](docs/app-634/README.md)
+- Delivery-канбан: GitHub Project [Sitrifor Delivery](https://github.com/users/Sitrifor/projects/1)
+
 ## DNS — почему у части пользователей / App Review 404
 
 Сайт на **этом VPS** работает. Страница Support тоже: `https://sitrifor.ru/support/` → **200** на IP **217.26.24.29**.

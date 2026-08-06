@@ -5,7 +5,7 @@
 | Файл | О чём |
 |------|--------|
 | [sitrifor-web.md](sitrifor-web.md) | Сайт, стек, деплой, SEO |
-| [app-634.md](app-634.md) | iOS-приложение 634 (пока краткий stub) |
+| [app-634.md](app-634.md) | Приложение 634 (вход) → полный каталог [docs/app-634/](../app-634/) |
 | [metrics.md](metrics.md) | Ключевые метрики для приоритезации |
 | [pipeline.md](pipeline.md) | Канбан-роли и правила skip |
 
