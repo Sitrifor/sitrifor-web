@@ -18,3 +18,11 @@ Dashboard Cursor → Integrations → GitHub App только на `sitrifor-web
 
 ## Следующий репо
 `sitrifor-634` - когда код приложения готов к переносу с Mac.
+
+## API access (ops)
+
+Для настройки Projects v2 нужен **Classic** PAT (`ghp_…`) со scope `repo` + `project`.
+Fine-grained (`github_pat_…`) к доске Projects v2 у user-аккаунта Sitrifor не пускает.
+
+Токен хранить только на сервере: `/root/.config/sitrifor/github.token` (chmod 600), не в git.
+После утечки в чат - Revoke и перевыпуск.
