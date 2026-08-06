@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "updated": "2026-08-06",
+  "site": "https://sitrifor.ru",
+  "hubs": [
+    {
+      "id": "index",
+      "path": "/guides/",
+      "cluster": "cross",
+      "priority": 1,
+      "file": "index.json",
+      "sitemapPriority": "0.9",
+      "changefreq": "weekly"
+    },
+    {
+      "id": "aftercare",
+      "path": "/guides/aftercare/",
+      "cluster": "уход_заживление",
+      "priority": 1,
+      "file": "aftercare.json",
+      "sitemapPriority": "0.9",
+      "changefreq": "weekly"
+    },
+    {
+      "id": "cartridges",
+      "path": "/guides/cartridges/",
+      "cluster": "картриджи",
+      "priority": 1,
+      "file": "cartridges.json",
+      "sitemapPriority": "0.85",
+      "changefreq": "weekly"
+    },
+    {
+      "id": "pigments",
+      "path": "/guides/pigments/",
+      "cluster": "краски_пигменты",
+      "priority": 1,
+      "file": "pigments.json",
+      "sitemapPriority": "0.85",
+      "changefreq": "weekly"
+    },
+    {
+      "id": "machines",
+      "path": "/guides/machines/",
+      "cluster": "машинки",
+      "priority": 1,
+      "file": "machines.json",
+      "sitemapPriority": "0.8",
+      "changefreq": "monthly"
+    },
+    {
+      "id": "consumables",
+      "path": "/guides/consumables/",
+      "cluster": "расходники",
+      "priority": 1,
+      "file": "consumables.json",
+      "sitemapPriority": "0.8",
+      "changefreq": "monthly"
+    },
+    {
+      "id": "sketches",
+      "path": "/guides/sketches/",
+      "cluster": "эскизы_трафареты",
+      "priority": 1,
+      "file": "sketches.json",
+      "sitemapPriority": "0.8",
+      "changefreq": "monthly"
+    },
+    {
+      "id": "studio",
+      "path": "/guides/studio/",
+      "cluster": "бизнес_клиенты",
+      "priority": 1,
+      "file": "studio.json",
+      "sitemapPriority": "0.85",
+      "changefreq": "weekly"
+    },
+    {
+      "id": "education",
+      "path": "/guides/education/",
+      "cluster": "обучение",
+      "priority": 2,
+      "file": "education.json",
+      "sitemapPriority": "0.75",
+      "changefreq": "monthly"
+    },
+    {
+      "id": "price-calculator",
+      "path": "/tools/price-calculator/",
+      "cluster": "калькулятор_цена",
+      "priority": 1,
+      "file": "price-calculator.json",
+      "sitemapPriority": "0.9",
+      "changefreq": "monthly",
+      "kind": "tool"
+    },
+    {
+      "id": "app-634",
+      "path": "/634/",
+      "cluster": "приложение_634",
+      "priority": 1,
+      "file": "app-634.json",
+      "sitemapPriority": "0.95",
+      "changefreq": "weekly",
+      "kind": "tool"
+    }
+  ]
+}

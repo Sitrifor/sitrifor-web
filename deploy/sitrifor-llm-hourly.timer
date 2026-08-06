@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Sitrifor LLM editor every 20 minutes (max 1 article)
+
+[Timer]
+OnCalendar=*:0/20
+Persistent=false
+Unit=sitrifor-llm-hourly.service
+RandomizedDelaySec=45
+
+[Install]
+WantedBy=timers.target

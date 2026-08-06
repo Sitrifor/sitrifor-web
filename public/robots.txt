@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Host: sitrifor.ru
+Sitemap: https://sitrifor.ru/sitemap.xml
+Sitemap: https://sitrifor.ru/sitemap-news.xml
+Sitemap: https://sitrifor.ru/sitemap-marketplace.xml

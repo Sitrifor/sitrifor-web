@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Sitrifor SEO autopilot every 6 hours
+
+[Timer]
+OnCalendar=*-*-* 03,09,15,21:20:00
+Persistent=true
+Unit=sitrifor-seo-autopilot.service
+RandomizedDelaySec=180
+
+[Install]
+WantedBy=timers.target

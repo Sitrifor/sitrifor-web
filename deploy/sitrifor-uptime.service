@@ -1,0 +1,18 @@
+[Unit]
+Description=Sitrifor site availability (uptime) check
+After=network-online.target sitrifor-api.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/sitrifor/seo
+Environment=NODE_ENV=production
+# Lock is acquired inside uptime-check.sh (flock -n /tmp/sitrifor-uptime.lock)
+ExecStart=/bin/bash /var/www/sitrifor/seo/scripts/uptime-check.sh
+Nice=15
+CPUQuota=25%
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=multi-user.target

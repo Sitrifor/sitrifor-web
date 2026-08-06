@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Sitrifor uptime check every 5 minutes
+
+[Timer]
+OnCalendar=*-*-* *:0/5:00
+Persistent=false
+Unit=sitrifor-uptime.service
+AccuracySec=30s
+RandomizedDelaySec=20
+
+[Install]
+WantedBy=timers.target

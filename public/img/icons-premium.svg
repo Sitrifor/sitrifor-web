@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-tattoo" viewBox="0 0 32 32" fill="none">
+    <path d="M16 4l2.2 6.8H25l-5.5 4 2.1 6.5L16 17.5l-6.6 4.8 2.1-6.5-5.5-4h6.8L16 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-care" viewBox="0 0 32 32" fill="none">
+    <path d="M16 27s-9-5.5-9-12a5 5 0 019 0 5 5 0 019 0c0 6.5-9 12-9 12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-earn" viewBox="0 0 32 32" fill="none">
+    <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M19 14h4a3 3 0 010 6h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="12" cy="15" r="1.5" fill="currentColor"/>
+    <path d="M22 6l2 3 3-1-1 3 3 1-3 2 1-2-3-3 1 1-3-3-1 3-2-1 2 3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-app" viewBox="0 0 32 32" fill="none">
+    <rect x="9" y="4" width="14" height="24" rx="2.5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="16" cy="24" r="1.5" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-it" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M16 6v3M16 23v3M6 16h3M23 16h3M9.2 9.2l2.1 2.1M20.7 20.7l2.1 2.1M9.2 22.8l2.1-2.1M20.7 11.3l2.1-2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-edu" viewBox="0 0 32 32" fill="none">
+    <path d="M4 12l12-6 12 6-12 6-12-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M8 15v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="icon-partnership" viewBox="0 0 32 32" fill="none">
+    <path d="M6 20c0-3.3 2.7-6 6-6h2c3.3 0 6 2.7 6 6v3H6v-3z" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="11" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="21" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="icon-biz" viewBox="0 0 32 32" fill="none">
+    <rect x="5" y="10" width="22" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M5 16h22M12 22h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M11 10V8a5 5 0 0110 0v2" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 20 20" fill="none">
+    <path d="M7.5 5L12.5 10l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-audience-clients" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="11" r="4" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M8 26c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M24 14l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-audience-masters" viewBox="0 0 32 32" fill="none">
+    <rect x="10" y="6" width="12" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M13 24h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M6 12h4M22 12h4M6 18h4M22 18h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-audience-partners" viewBox="0 0 32 32" fill="none">
+    <path d="M6 22c0-3 2.5-5 5-5h2c2.5 0 5 2 5 5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="12" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="22" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M17 22c0-3 2.2-5 5-5h0" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="icon-home" viewBox="0 0 32 32" fill="none">
+    <path d="M6 14l10-8 10 8v12H6V14z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M13 26v-8h6v8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-faq" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 12a4 4 0 017.2 2.8c0 2-2.2 2.7-2.2 4.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="16" cy="23" r="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-vk" viewBox="0 0 32 32" fill="none">
+    <rect x="4" y="8" width="24" height="16" rx="4" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M9 16.5c3.5-.5 5.5-2.5 6.5-6M16 16.5c1.5 3.5 3.5 5.5 6.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-telegram" viewBox="0 0 32 32" fill="none">
+    <path d="M6 16l18-8-4 18-5-7-7-3 16-6-18 8 4-4-3 7 5 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-max" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M11 16h10M16 11v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-globe" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M6 16h20M16 6c3 3.5 3 16.5 0 20M16 6c-3 3.5-3 16.5 0 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 32 32" fill="none">
+    <rect x="7" y="7" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="16" cy="16" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="22" cy="10" r="1.2" fill="currentColor"/>
+  </symbol>
+</svg>

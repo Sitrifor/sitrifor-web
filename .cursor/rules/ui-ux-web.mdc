@@ -1,0 +1,29 @@
+---
+description: Web UI workflow for Sitrifor frontend work
+globs: public/**/*.{html,css,js}
+alwaysApply: false
+---
+
+# Sitrifor Web UI Rule
+
+Before changing UI in `public/**/*.{html,css,js}`:
+- identify the user scenario and the main CTA;
+- identify the visual source of truth: screenshots, design system, existing code, or agreed reference;
+- check mobile order, empty/loading/success/error states, and dead-end flows;
+- decide whether the task needs no motion, subtle polish, or a dedicated motion concept;
+- confirm button CSS is loaded on the target page (guides must not rely on `yandex-business.css` unless linked).
+
+When implementing:
+- prefer clear visual hierarchy over decorative complexity;
+- do not mix unrelated jobs-to-be-done in one screen or tab set;
+- keep one dominant action per viewport section;
+- preserve responsive readability, spacing rhythm, and tap target quality;
+- for images: match CSS max size to aspect ratio (phone ≠ square marketing);
+- remove orphan HTML/CSS/JS references when deleting UI;
+- for Sitrifor's static frontend, default to lightweight CSS/JS motion, not heavy animation tooling.
+
+After implementing:
+- run a UX pass for hierarchy, affordance, copy clarity, dead CTAs, and scroll behavior;
+- verify computed contrast on CTAs and that media does not eat a full viewport scroll;
+- verify on the actual page, not just in code;
+- if motion was added, check `prefers-reduced-motion`.

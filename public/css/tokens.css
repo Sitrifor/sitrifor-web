@@ -1,0 +1,81 @@
+/* 6:34 product design tokens — charcoal + yellow */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+  --g-font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Manrope', var(--g-font-family);
+
+  --color-bg: #111114;
+  --color-bg-elevated: #1A1A1E;
+  --color-surface: #2C2C2E;
+  --color-surface-2: #1C1C1E;
+  --color-text: #FFFFFF;
+  --color-text-secondary: rgba(255, 255, 255, 0.56);
+  --color-text-hint: rgba(255, 255, 255, 0.38);
+  --color-accent: #FFD60A;
+  --color-accent-hover: #F0C800;
+  --color-accent-ink: #111114;
+  --color-warm: #FFD60A;
+  --color-success: #34C759;
+  --color-error: #FF453A;
+  --color-line: rgba(255, 255, 255, 0.1);
+
+  --g-color-base-background: var(--color-bg);
+  --g-color-base-generic: #2A2A2E;
+  --g-color-base-generic-hover: #35353A;
+  --g-color-base-simple-hover: rgba(255, 255, 255, 0.06);
+  --g-color-line-generic: var(--color-line);
+  --g-color-text-primary: var(--color-text);
+  --g-color-text-secondary: var(--color-text-secondary);
+  --g-color-text-hint: var(--color-text-hint);
+  --g-color-text-brand: var(--color-accent);
+  --g-color-text-link: var(--color-accent);
+  --g-color-text-link-hover: var(--color-accent-hover);
+  --g-color-base-brand: var(--color-accent);
+  --g-color-base-brand-hover: var(--color-accent-hover);
+  --g-color-text-brand-contrast: var(--color-accent-ink);
+
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --g-border-radius-xs: 8px;
+  --g-border-radius-s: var(--radius-sm);
+  --g-border-radius-m: 14px;
+  --g-border-radius-l: var(--radius-lg);
+  --g-border-radius-xl: 20px;
+  --g-border-radius-2xl: 24px;
+
+  --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.35);
+  --g-shadow-s: var(--shadow-card);
+  --g-shadow-m: 0 12px 36px rgba(0, 0, 0, 0.4);
+  --g-shadow-l: 0 20px 48px rgba(0, 0, 0, 0.5);
+
+  --g-spacing-1: 4px;
+  --g-spacing-2: 8px;
+  --g-spacing-3: 12px;
+  --g-spacing-4: 16px;
+  --g-spacing-5: 20px;
+  --g-spacing-6: 24px;
+  --g-spacing-8: 32px;
+  --g-spacing-10: 40px;
+  --g-spacing-12: 48px;
+
+  --header-height: 56px;
+  --container-max: 1120px;
+  --container-pad: 20px;
+
+  --ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-spring: cubic-bezier(0.34, 1.2, 0.64, 1);
+
+  --audience-clients: var(--color-accent);
+  --audience-masters: var(--color-accent);
+  --audience-partners: var(--color-success);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 60px;
+    --container-pad: 28px;
+  }
+}

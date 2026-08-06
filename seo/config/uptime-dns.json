@@ -1,0 +1,34 @@
+{
+  "enabled": true,
+  "hostname": "sitrifor.ru",
+  "expected_ips": ["217.26.24.29"],
+  "known_bad_ips": ["45.130.41.193"],
+  "timeout_ms": 5000,
+  "resolvers": [
+    { "name": "system", "servers": null },
+    { "name": "cloudflare", "servers": ["1.1.1.1"] },
+    { "name": "google", "servers": ["8.8.8.8"] },
+    { "name": "quad9", "servers": ["9.9.9.9"] },
+    {
+      "name": "beget-auth",
+      "servers": ["ns1.beget.com"],
+      "resolve_nameserver": true,
+      "reference": true
+    }
+  ],
+  "parking_probe": {
+    "enabled": true,
+    "ip": "45.130.41.193",
+    "host_header": "sitrifor.ru",
+    "path": "/",
+    "scheme": "http",
+    "timeout_ms": 5000,
+    "severity_if_alive": "warn",
+    "body_signatures": [
+      "cp.beget.com",
+      "Новый сайт успешно создан",
+      "Apache2 Ubuntu Default Page",
+      "<address>Apache/"
+    ]
+  }
+}

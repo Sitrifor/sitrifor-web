@@ -1,0 +1,131 @@
+{
+  "base_url": "https://sitrifor.ru",
+  "timeout_ms": 15000,
+  "concurrency": 6,
+  "warn_ms": 2000,
+  "critical_ms": 5000,
+  "min_body_bytes": 200,
+  "max_redirects": 8,
+  "user_agent": "SitriforUptime/1.0 (+https://sitrifor.ru)",
+  "expected_server_re": "(?i)nginx",
+  "forbidden_server_re": "(?i)\\bApache\\b",
+  "apache_body_signatures": [
+    "Apache2 Ubuntu Default Page",
+    "It works!",
+    "<address>Apache/"
+  ],
+  "log_dir": "reports/uptime",
+  "retention_days": 30,
+  "max_jsonl_bytes": 52428800,
+  "dns_config": "config/uptime-dns.json",
+  "sitemap": {
+    "enabled": true,
+    "urls": [
+      "https://sitrifor.ru/sitemap.xml",
+      "https://sitrifor.ru/sitemap-news.xml"
+    ],
+    "max_total": 80,
+    "news_sample": 5,
+    "include_all_main": true
+  },
+  "checks": [
+    {
+      "name": "home",
+      "url": "https://sitrifor.ru/",
+      "expect_status": 200,
+      "markers": ["Sitrifor"],
+      "min_body_bytes": 1000,
+      "check_server": true
+    },
+    {
+      "name": "news-list",
+      "url": "https://sitrifor.ru/news",
+      "expect_status": 200,
+      "markers": ["Sitrifor", "news"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "news-ssr-sample",
+      "url": "https://sitrifor.ru/news/a/634-app-store-launch",
+      "expect_status": 200,
+      "markers": ["rel=\"canonical\"", "Sitrifor", "634"],
+      "min_body_bytes": 800,
+      "check_server": true
+    },
+    {
+      "name": "masters",
+      "url": "https://sitrifor.ru/masters",
+      "expect_status": 200,
+      "markers": ["Sitrifor"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "partners",
+      "url": "https://sitrifor.ru/partners",
+      "expect_status": 200,
+      "markers": ["Sitrifor"],
+      "min_body_bytes": 400,
+      "check_server": true
+    },
+    {
+      "name": "guides-index",
+      "url": "https://sitrifor.ru/guides/",
+      "expect_status": 200,
+      "markers": ["Sitrifor", "Гайды"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "hub-aftercare",
+      "url": "https://sitrifor.ru/guides/aftercare/",
+      "expect_status": 200,
+      "markers": ["Sitrifor"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "hub-cartridges",
+      "url": "https://sitrifor.ru/guides/cartridges/",
+      "expect_status": 200,
+      "markers": ["Sitrifor"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "app-634",
+      "url": "https://sitrifor.ru/634/",
+      "expect_status": 200,
+      "markers": ["Sitrifor", "634"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "price-calculator",
+      "url": "https://sitrifor.ru/tools/price-calculator/",
+      "expect_status": 200,
+      "markers": ["Sitrifor"],
+      "min_body_bytes": 500,
+      "check_server": true
+    },
+    {
+      "name": "api-health-internal",
+      "url": "http://127.0.0.1:8081/health",
+      "expect_status": 200,
+      "markers": ["\"ok\":true"],
+      "min_body_bytes": 10,
+      "check_server": false,
+      "content_type_includes": "json"
+    },
+    {
+      "name": "soft404-probe",
+      "url": "https://sitrifor.ru/news/a/uptime-monitor-missing-slug-do-not-create",
+      "expect_status": 404,
+      "markers": [],
+      "min_body_bytes": 0,
+      "check_server": true,
+      "skip_body_size": true
+    }
+  ]
+}

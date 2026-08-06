@@ -1,0 +1,23 @@
+[Unit]
+Description=Sitrifor daily tattoo industry LLM writer
+After=network-online.target ollama.service sitrifor-api.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/sitrifor/seo
+Environment=OLLAMA_HOST=http://127.0.0.1:11434
+Environment=OLLAMA_MODEL=qwen2.5:1.5b
+Environment=OLLAMA_NUM_THREAD=2
+Environment=OLLAMA_NUM_CTX=2048
+Environment=NEWS_LLM_DAILY=1
+Environment=NEWS_LLM_REVIEWS=0
+Environment=NEWS_LLM_INSIGHTS=0
+Environment=TM_REVIEW_LIMIT=1
+ExecStart=/usr/bin/flock -n /tmp/sitrifor-llm.lock /var/www/sitrifor/seo/scripts/news-llm-daily.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=multi-user.target

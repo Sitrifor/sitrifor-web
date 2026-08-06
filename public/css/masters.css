@@ -1,0 +1,8 @@
+/* Masters page tab panels */
+.masters-app-panel {
+  padding: var(--g-spacing-2) 0;
+}
+
+.masters-app-panel .app634-showcase-wrap {
+  margin-top: var(--g-spacing-4);
+}

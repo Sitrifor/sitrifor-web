@@ -1,0 +1,39 @@
+name: Sitrifor task
+description: Задача заказчика или техдолг
+title: "[web] "
+labels: ["product:web"]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - web
+        - 634
+        - both
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - feature
+        - bug
+        - techdebt
+        - content
+        - seo
+    validations:
+      required: true
+  - type: textarea
+    id: brief
+    attributes:
+      label: Brief
+      description: Что нужно и зачем (для кого, какой результат)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Ограничения, ссылки, «юридическое не нужно» и т.п.

@@ -1,0 +1,19 @@
+[Unit]
+Description=Sitrifor SEO autopilot (hubs, news SEO, sitemaps, IndexNow, audits)
+After=network-online.target sitrifor-api.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/sitrifor/seo
+Environment=NODE_ENV=production
+# Conservative defaults; override in drop-in if needed
+Environment=NEWS_SEO_INJECT_LINKS=1
+# Lock is acquired inside seo-autopilot.sh (single flock); do not wrap ExecStart with flock
+ExecStart=/bin/bash /var/www/sitrifor/seo/scripts/seo-autopilot.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=multi-user.target

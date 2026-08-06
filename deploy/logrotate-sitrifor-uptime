@@ -1,0 +1,12 @@
+/var/www/sitrifor/seo/reports/uptime/*.log
+/var/www/sitrifor/seo/reports/uptime/*.jsonl {
+  daily
+  rotate 30
+  missingok
+  notifempty
+  compress
+  delaycompress
+  copytruncate
+  dateext
+  maxsize 20M
+}

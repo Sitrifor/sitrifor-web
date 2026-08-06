@@ -1,0 +1,1229 @@
+{
+  "items": [
+    {
+      "id": "01",
+      "slug": "first-game-doll",
+      "title": {
+        "ru": "Кукла Первой Игры",
+        "en": "The First Game Doll",
+        "de": "Die Puppe des Ersten Spiels"
+      },
+      "story": {
+        "ru": "Её сшили в подвале, где никто не смеялся вслух. Чёрные глазницы помнят правила, которых ещё не объяснили, а красные спирали на щеках - печать наследника. Каждый, кто берёт её на руки, слышит тихий вопрос: «Хочешь сыграть?»",
+        "en": "She was stitched in a basement where laughter was forbidden. Hollow black eyes remember rules not yet spoken, and the red spirals on her cheeks mark an heir. Anyone who lifts her hears a soft question: want to play?",
+        "de": "Sie wurde im Keller genäht, wo Lachen verboten war. Die schwarzen Augenhöhlen erinnern Regeln, die noch niemand ausgesprochen hat, und die roten Spiralen auf den Wangen sind das Siegel einer Erbin. Wer sie aufhebt, hört eine leise Frage: möchtest du spielen?"
+      },
+      "audience": {
+        "ru": "Коллекционер хоррор-арта и кинематографических аллюзий, чья гостиная ближе к кабинету редкостей, чем к светлой детской. Ценит работы, которые ломают невинность и оставляют послевкусие тревожного шика.",
+        "en": "A collector of horror art and cinematic allusions whose living room feels more like a cabinet of curiosities than a nursery. Prefers pieces that fracture innocence and leave an aftertaste of anxious chic.",
+        "de": "Ein Sammler von Horror-Kunst und filmischen Anspielungen, dessen Wohnzimmer eher einem Kuriositätenkabinett gleicht als einer Kinderstube. Schätzt Werke, die Unschuld brechen und ängstlichen Chic hinterlassen."
+      },
+      "vibe": "gothic study, macabre nursery, dark cinema den",
+      "charPrompt": "A realistic infant doll with hollow black eyes, red spiral cheek markings, red lips and a tiny red bow tie, sitting upright against a dark shaded backdrop.",
+      "tags": [
+        "doll",
+        "gothic",
+        "horror",
+        "nursery"
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "throne-of-three-faces",
+      "title": {
+        "ru": "Трон Трёх Лиц",
+        "en": "Throne of Three Faces",
+        "de": "Thron der Drei Gesichter"
+      },
+      "story": {
+        "ru": "Говорят, этот трон никогда не пустовал: на спинке улыбается король шутов, а подлокотники - вечный хор печали и ужаса. Кто садится сюда, получает власть над залом и теряет право на собственное лицо. Внизу, на ножках-сапогах, всё ещё слышен топот старого манежа.",
+        "en": "They say this throne was never empty: a grinning king of fools crowns the backrest, while the armrests forever sing sorrow and shock. Whoever sits here rules the hall and loses the right to a private face. At the boot-like legs, the old arena still stamps.",
+        "de": "Man sagt, dieser Thron war nie leer: ein grinsender Narrenkönig krönt die Lehne, während die Armlehnen ewig Trauer und Schrecken singen. Wer sich setzt, beherrscht den Saal und verliert das Recht auf ein eigenes Gesicht. An den stiefelartigen Beinen stampft noch die alte Manege."
+      },
+      "audience": {
+        "ru": "Владелец тёмного лофта или частного клуба, для которого мебель - театр. Любит готический цирк, бархат и символы карт; покупает искусство как главного персонажа комнаты.",
+        "en": "Owner of a dark loft or private club who treats furniture as theatre. Loves gothic circus, velvet and card symbols; buys art as the room's lead character.",
+        "de": "Besitzer eines dunklen Lofts oder Privatclubs, für den Möbel Theater sind. Liebt gotischen Zirkus, Samt und Kartensymbole; kauft Kunst als Hauptfigur des Raums."
+      },
+      "vibe": "gothic circus, dark lounge, velvet baroque loft",
+      "charPrompt": "An ornate sentient gothic throne of black wood and red diamond-tufted velvet, crowned by a manic jester head, with sad and shocked clown faces as armrests and boot-shaped legs.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "royal"
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "dressing-room-number-one",
+      "title": {
+        "ru": "Гримёрка Номер Один",
+        "en": "Dressing Room Number One",
+        "de": "Garderobe Nummer Eins"
+      },
+      "story": {
+        "ru": "После последнего номера свет в гримёрке ещё горел, но хозяин уже исчез. В зеркале осталась улыбка, на стуле - шляпа, на полу - микрофон и палочки. Вывеска «1st» помнит давление афиши: быть первым значит уходить последним.",
+        "en": "After the final act the dressing-room lights still burned, but the star was gone. A smile stayed in the mirror, a hat on the chair, a mic and drumsticks on the floor. The 1st sign remembers the billboard's pressure: to be first is to leave last.",
+        "de": "Nach der letzten Nummer brannten die Lampen noch, doch der Star war weg. Im Spiegel blieb ein Lächeln, auf dem Stuhl ein Hut, auf dem Boden Mikrofon und Sticks. Das Schild 1st kennt den Druck der Plakate: Erster sein heißt als Letzter gehen."
+      },
+      "audience": {
+        "ru": "Покупатель с вкусом к закулисному нарративу - режиссёр интерьера, меломан, коллекционер атмосферы. Ищет крупные сюжетные работы для стены над диваном или в кабинете.",
+        "en": "A buyer who loves backstage narrative - an interior director, music lover, atmosphere collector. Seeks large story pieces for the wall above a sofa or in a study.",
+        "de": "Ein Käufer mit Sinn für Backstage-Narrative - Interieur-Regisseur, Melomane, Atmosphäre-Sammler. Sucht große Erzählbilder für die Wand über dem Sofa oder im Arbeitszimmer."
+      },
+      "vibe": "backstage gothic, dark cabaret, theatrical loft",
+      "charPrompt": "A melancholic circus dressing room vanity with a bulb-framed mirror showing a ghostly clown smile, red-handled drawers, hanging costume, sousaphone, and a chair with a fedora and red scarf.",
+      "tags": [
+        "circus",
+        "theatre",
+        "doll",
+        "gothic"
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "s-love-jester",
+      "title": {
+        "ru": "Урок «S-LOVE»",
+        "en": "The S-LOVE Lesson",
+        "de": "Die S-LOVE-Lektion"
+      },
+      "story": {
+        "ru": "Его лицо треснуло в день, когда на доске написали LOVE. Красная черта и буква S превратили нежность в насмешку, а звёздные глаза запомнили урок навсегда. Мел и тряпка у ног - доказательства, что исправления были публичными.",
+        "en": "His face cracked the day someone wrote LOVE on the slate. A red slash and an S turned tenderness into mockery, and star-eyes kept the lesson forever. Chalk and eraser at his feet prove the corrections were public.",
+        "de": "Sein Gesicht zerbrach an dem Tag, als LOVE auf die Tafel kam. Ein roter Strich und ein S verwandelten Zärtlichkeit in Spott, und Sterneaugen behielten die Lektion für immer. Kreide und Schwamm zu seinen Füßen beweisen: die Korrektur war öffentlich."
+      },
+      "audience": {
+        "ru": "Ценитель ироничного тёмного арта, которому близки темы разочарования и маски. Повесит в кабинете или в тёмной детской взрослого коллекционера.",
+        "en": "A lover of ironic dark art drawn to disappointment and masks. Will hang it in a study or an adult collector's dark nursery.",
+        "de": "Liebhaber ironischer Dark Art zu Themen von Enttäuschung und Masken. Hängt es im Arbeitszimmer oder in einer dunklen Sammler-Kinderstube."
+      },
+      "vibe": "circus macabre, dark nursery, neo-traditional studio",
+      "charPrompt": "A cracked porcelain jester doll with red star eyes and a starry black hood, sitting on a stool holding a chalkboard reading LOVE crossed out with a red S above.",
+      "tags": [
+        "circus",
+        "doll",
+        "horror",
+        "nursery"
+      ]
+    },
+    {
+      "id": "05",
+      "slug": "leap-through-the-ring",
+      "title": {
+        "ru": "Прыжок Сквозь Кольцо",
+        "en": "Leap Through the Ring",
+        "de": "Sprung durch den Ring"
+      },
+      "story": {
+        "ru": "Когда тигр прыгнул в красное кольцо, половина его осталась по ту сторону жизни. Спереди - белый скелет, сзади - живая полосатая плоть: номер продолжается, даже если зрители уже ушли. Чёрная пустота внутри кольца - дверь, которую он открывает снова и снова.",
+        "en": "When the tiger leapt through the red ring, half of him stayed on the far side of life. Front: polished skeleton; back: living striped flesh - the act continues after the crowd has left. The black void inside the hoop is a door he opens again and again.",
+        "de": "Als der Tiger durch den roten Ring sprang, blieb die Hälfte jenseits des Lebens. Vorn: poliertes Skelett; hinten: lebendiges Streifenfell - die Nummer läuft weiter, auch ohne Publikum. Die schwarze Leere im Reifen ist eine Tür, die er immer wieder öffnet."
+      },
+      "audience": {
+        "ru": "Покупатель с характером хищника: тёмный бар, кабинет с охотничьими мотивами, loft с индустриальным металлом. Ценит динамику и memento mori без сантиментов.",
+        "en": "A buyer with a predator temperament: dark bar, trophy-motif study, industrial loft. Values motion and unsentimental memento mori.",
+        "de": "Käufer mit Raubtier-Temperament: dunkle Bar, Arbeitszimmer mit Trophäenmotiven, Industrie-Loft. Schätzt Dynamik und unsentimentales Memento mori."
+      },
+      "vibe": "dark circus, macabre study, industrial loft",
+      "charPrompt": "A leaping tiger split mid-body - skeletal white front half and striped grey rear - jumping through a solid red circus hoop with a black void inside.",
+      "tags": [
+        "circus",
+        "horror",
+        "creature",
+        "bones"
+      ]
+    },
+    {
+      "id": "06",
+      "slug": "matryoshka-of-the-third-eye",
+      "title": {
+        "ru": "Матрёшка с Третьим Глазом",
+        "en": "Matryoshka of the Third Eye",
+        "de": "Matrjoschka mit dem Dritten Auge"
+      },
+      "story": {
+        "ru": "Её выточили как народную куклу, но внутри оказалась артистка ночного цирка. Третий глаз на лбу видит то, что прячут косы и колокольчики. Пустой взгляд белых зрачков говорит: слои не кончаются - всегда есть ещё одна душа внутри.",
+        "en": "She was carved as a folk doll, yet inside lived a night-circus artist. The third eye on her brow sees what braids and bells conceal. Blank white pupils whisper that the layers never end - another soul always waits within.",
+        "de": "Sie wurde als Volkspuppe geschnitzt, doch innen lebte eine Nachtzirkus-Künstlerin. Das dritte Auge auf der Stirn sieht, was Zöpfe und Glöckchen verbergen. Weiße Pupillen flüstern: die Schichten enden nie - stets wartet eine weitere Seele."
+      },
+      "audience": {
+        "ru": "Русскоязычный коллекционер, ищущий синтез фольклора и готического цирка. Любит интерьеры с бархатом, чёрно-белым графичным акцентом и редкими куклами.",
+        "en": "A Russian-speaking collector seeking folklore fused with gothic circus. Prefers velvet interiors, graphic black-and-white accents and rare dolls.",
+        "de": "Russischsprachiger Sammler, der Folklore mit gotischem Zirkus verbindet. Mag Samt-Interieurs, grafische Schwarz-Weiß-Akzente und seltene Puppen."
+      },
+      "vibe": "dark folk, gothic circus, curiosity cabinet",
+      "charPrompt": "A matryoshka-shaped female pierrot bust with white clown makeup, a red third eye on a black cowl, twin braids, ruffled red collar and grey striped wooden sides.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "surreal"
+      ]
+    },
+    {
+      "id": "07",
+      "slug": "belly-mouth-imp",
+      "title": {
+        "ru": "Бес с Голодным Животом",
+        "en": "The Belly-Mouth Imp",
+        "de": "Der Imp mit dem Bauchmaul"
+      },
+      "story": {
+        "ru": "Он родился маленьким, сердитым и уже голодным: рот на животе открывается раньше, чем губы на лице. Красный огонёк над головой - его вечный антракт, а кнут в руке - дирижёрская палочка ночных номеров. Рога помнят, что он когда-то был звездой преисподней.",
+        "en": "He was born small, sulky and already hungry: the belly-mouth opens before the face does. The red flame above him is his eternal entr'acte, and the whip is a conductor's baton for midnight acts. His horns remember he once headlined Hell.",
+        "de": "Er wurde klein, grantig und schon hungrig geboren: das Bauchmaul öffnet sich vor dem Gesicht. Die rote Flamme über ihm ist sein ewiges Zwischenspiel, die Peitsche ein Taktstock für Mitternachtnummern. Seine Hörner erinnern: einst war er Star der Unterwelt."
+      },
+      "audience": {
+        "ru": "Поклонник creepy-cute и персонажного арта: молодой коллекционер, тату-студия, кабинет с демонами-талисманами. Ищет фигуру с характером, а не пейзаж.",
+        "en": "A fan of creepy-cute character art: young collector, tattoo studio, study of talismanic demons. Wants personality, not landscape.",
+        "de": "Fan von Creepy-Cute und Charakterkunst: junger Sammler, Tattoo-Studio, Arbeitszimmer mit Talisman-Dämonen. Will Persönlichkeit, keine Landschaft."
+      },
+      "vibe": "gothic circus, infernal nursery, tattoo studio wall",
+      "charPrompt": "A small grumpy grey demon jester with ram horns, red collar, bat wings, a flaming tip tail, a whip, and a toothy secondary mouth on his belly with a hovering red flame halo.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "nursery"
+      ]
+    },
+    {
+      "id": "08",
+      "slug": "identity-enigma-cube",
+      "title": {
+        "ru": "Кубик Личности",
+        "en": "The Identity Enigma Cube",
+        "de": "Der Identitäts-Würfel"
+      },
+      "story": {
+        "ru": "Его лицо разобрали на грани и перемешали, как проклятый пазл. Глаза, рты и швы никогда не совпадают полностью - и в этом его правда. Красный язык и слеза напоминают: эмоции тоже ходят кругами.",
+        "en": "His face was dismantled into facets and shuffled like a cursed puzzle. Eyes, mouths and stitches never fully align - and that is his truth. A red tongue and a tear remind you emotions also tumble.",
+        "de": "Sein Gesicht wurde in Facetten zerlegt und wie ein verfluchtes Puzzle gemischt. Augen, Münder und Nähte passen nie ganz - und das ist seine Wahrheit. Rote Zunge und Träne erinnern: auch Gefühle drehen sich."
+      },
+      "audience": {
+        "ru": "Коллекционер сюрреализма и тёмной психологии, которому нравятся объекты-метафоры. Повесит в кабинете или в галерейной нише лофта.",
+        "en": "A surrealism and dark-psychology collector who loves metaphor-objects. Will hang it in a study or loft gallery niche.",
+        "de": "Sammler von Surrealismus und dunkler Psychologie, der Objekt-Metaphern liebt. Hängt es im Arbeitszimmer oder in der Loft-Galerienische."
+      },
+      "vibe": "surrealist gallery, gothic study, neo-traditional wall",
+      "charPrompt": "A floating Rubik-style cube whose facets show mismatched eyes, mouths, stitches and clown rouge, with selective red accents and a black tear.",
+      "tags": [
+        "doll",
+        "surreal",
+        "object",
+        "interior"
+      ]
+    },
+    {
+      "id": "09",
+      "slug": "spiked-pointe-shoes",
+      "title": {
+        "ru": "Пуанты с Шипами",
+        "en": "Spiked Pointe Shoes",
+        "de": "Spitze mit Stacheln"
+      },
+      "story": {
+        "ru": "Эти пуанты вынесли её из балета в панк-кабаре. Красные полосы внутри помнят кровь репетиций, а шипы на носках - обещание, что следующий шаг будет последним для чужой ноги. Пряжки с черепами щёлкают, как аплодисменты.",
+        "en": "These pointe shoes carried her from ballet into punk cabaret. Red stripes inside remember rehearsal blood; toe spikes promise the next step may be someone's last. Skull buckles click like applause.",
+        "de": "Diese Spitzen führten sie vom Ballett ins Punk-Kabarett. Rote Streifen innen erinnern an Probenblut; Stacheln an den Spitzen versprechen, der nächste Schritt könne jemandes letzter sein. Schädel-Schnallen klicken wie Applaus."
+      },
+      "audience": {
+        "ru": "Танцовщица духа и коллекционер fashion-dark: интерьер с чёрной кожей, металлом и театральным светом. Покупает символ силы, а не милую туфельку.",
+        "en": "A dancer at heart and fashion-dark collector: interiors of black leather, metal and stage light. Buys a symbol of power, not a pretty slipper.",
+        "de": "Tänzerin im Herzen und Fashion-Dark-Sammlerin: Interieur aus schwarzem Leder, Metall und Bühnenlicht. Kauft ein Macht-Symbol, keinen süßen Schuh."
+      },
+      "vibe": "dark theater, industrial loft, gothic boudoir",
+      "charPrompt": "A pair of gothic punk pointe shoes in black and red with cone spikes, buckled straps, skull emblems and striped red-black linings.",
+      "tags": [
+        "theatre",
+        "horror",
+        "creature",
+        "object"
+      ]
+    },
+    {
+      "id": "10",
+      "slug": "cabaret-firefly",
+      "title": {
+        "ru": "Кабаре Светлячка",
+        "en": "The Cabaret Firefly",
+        "de": "Das Kabarett-Glühwürmchen"
+      },
+      "story": {
+        "ru": "Она - насекомое высшего света: кружевной воротник, корсет с сердечками и крылья в кровавых пятнах. Бусины-слёзы на крыльях - её украшения и её трофеи. Светящееся брюшко держит зал, пока оркестр молчит.",
+        "en": "She is an insect of high society: lace ruff, heart-patterned corset, wings spotted like blood. Beaded tears on her wings are jewelry and trophies. Her glowing abdomen holds the room while the orchestra stays silent.",
+        "de": "Sie ist ein Insekt der Hautevolee: Spitzenkrause, Herz-Korsett, blutgetupfte Flügel. Perlen-Tränen an den Flügeln sind Schmuck und Beute. Ihr leuchtender Hinterleib hält den Saal, während das Orchester schweigt."
+      },
+      "audience": {
+        "ru": "Любитель викторианского макабра и живых кунсткамер. Ищет изящный surreal character для тёмной спальни или кабинета редкостей.",
+        "en": "A lover of Victorian macabre and living cabinets of curiosity. Seeks an elegant surreal character for a dark bedroom or rarity study.",
+        "de": "Liebhaber viktorianischen Makabers und lebendiger Wunderkammern. Sucht einen eleganten Surreal-Charakter für dunkles Schlafzimmer oder Kuriositätenkabinett."
+      },
+      "vibe": "victorian macabre, curiosity cabinet, dark academia",
+      "charPrompt": "An upright moth-firefly hybrid with lace ruff, red-and-white corset with black hearts, black upper wings, grey lower wings with red spots and dangling tear jewels, glowing abdomen.",
+      "tags": [
+        "theatre",
+        "horror",
+        "surreal",
+        "creature"
+      ]
+    },
+    {
+      "id": "11",
+      "slug": "crimson-whip-lion",
+      "title": {
+        "ru": "Лев Красного Кнута",
+        "en": "Lion of the Crimson Whip",
+        "de": "Löwe der Purpurpeitsche"
+      },
+      "story": {
+        "ru": "Его научили кланяться, но красные глаза помнят вкус мяса лучше, чем аплодисменты. Кнут над гривой - не узда, а нимб дрессировки, который он уже перерос. В готической раме он рычит как герб арены, где зверь всегда побеждает.",
+        "en": "He was trained to bow, yet red eyes remember meat better than applause. The whip over his mane is no leash but a halo of training he has outgrown. In a gothic frame he roars like the arena's crest, where the beast always wins.",
+        "de": "Er lernte sich zu verneigen, doch rote Augen erinnern Fleisch besser als Applaus. Die Peitsche über der Mähne ist keine Leine, sondern ein Heiligenschein des Drills, den er längst überwachsen hat. Im gotischen Rahmen brüllt er wie das Wappen der Arena, in der das Tier stets siegt."
+      },
+      "audience": {
+        "ru": "Коллекционер агрессивного dark art: домашний бар, мужской кабинет, пространство с «альфа»-энергией. Любит геральдику, цирк и хищников без сантиментов.",
+        "en": "A collector of aggressive dark art: home bar, masculine study, spaces with alpha energy. Loves heraldry, circus and unsentimental predators.",
+        "de": "Sammler aggressiver Dark Art: Hausbar, Herrenarbeitszimmer, Räume mit Alpha-Energie. Liebt Heraldik, Zirkus und unsentimentale Raubtiere."
+      },
+      "vibe": "gothic circus, trophy study, industrial loft bar",
+      "charPrompt": "A roaring grey lion with glowing red eyes and bloody cheek marks inside an ornate black scrollwork frame, with a red whip arched overhead and a slab of marbled raw meat below.",
+      "tags": [
+        "circus",
+        "gothic",
+        "horror",
+        "creature"
+      ]
+    },
+    {
+      "id": "12",
+      "slug": "wind-up-star-automaton",
+      "title": {
+        "ru": "Заводная Звезда",
+        "en": "The Wind-Up Star",
+        "de": "Der Aufziehstern"
+      },
+      "story": {
+        "ru": "Ключ в спине крутят чужие руки, а в груди висит единственная красная звезда - то, что осталось от сердца. Из уха-шестерёнки сыплется конфетти поломки. Он улыбается маской, потому что настоящие эмоции спрятаны в механизме.",
+        "en": "Foreign hands turn the key in his back, while a single red star hangs in his chest - all that remains of a heart. From a gear-like ear spills confetti of breakdown. He smiles with a mask because true feeling is locked in the mechanism.",
+        "de": "Fremde Hände drehen den Schlüssel in seinem Rücken, und in der Brust hängt ein einzelner roter Stern - alles, was vom Herzen blieb. Aus dem Getriebe-Ohr rieselt Konfetti des Defekts. Er lächelt mit Maske, weil echte Gefühle im Mechanismus stecken."
+      },
+      "audience": {
+        "ru": "Покупатель сюрреалистичных кукол и стимпанк-готики: лофт, студия, комната с игрушками для взрослых. Ценит меланхолию и механическую поэзию.",
+        "en": "A buyer of surreal dolls and steampunk gothic: loft, studio, adult toy-room vibes. Values melancholy and mechanical poetry.",
+        "de": "Käufer surrealer Puppen und Steampunk-Gotik: Loft, Atelier, Erwachsenen-Spielzimmer. Schätzt Melancholie und mechanische Poesie."
+      },
+      "vibe": "gothic circus, dark toybox, melancholic steampunk",
+      "charPrompt": "A monochrome wind-up doll in a pointed black hat with an eye motif, hollow chest holding a hanging red star, striped limbs, large circular ear gears leaking red debris, and a key in its back.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "surreal"
+      ]
+    },
+    {
+      "id": "13",
+      "slug": "synthetic-pierrot",
+      "title": {
+        "ru": "Синтетический Пьеро",
+        "en": "The Synthetic Pierrot",
+        "de": "Der Synthetische Pierrot"
+      },
+      "story": {
+        "ru": "Её сердце стало пикселем, а из затылка тянутся трубки, будто она подключена к чужой памяти. Красные глаза видят слишком ясно, чёрные губы молчат слишком долго. Она сжимает лацканы куртки, как будто держит себя от распада.",
+        "en": "Her heart became a pixel, and tubes trail from the nape as if she were plugged into borrowed memory. Red eyes see too clearly; black lips stay silent too long. She clutches her jacket lapels as if holding herself from coming apart.",
+        "de": "Ihr Herz wurde zum Pixel, und Schläuche ziehen vom Nacken, als wäre sie an fremde Erinnerung angeschlossen. Rote Augen sehen zu klar, schwarze Lippen schweigen zu lange. Sie greift die Jackenrevers, als hielte sie sich vor dem Zerfallen."
+      },
+      "audience": {
+        "ru": "Ценитель cyber-gothic и индустриального шика: бетон, металл, неон-акценты. Покупает портреты с психологическим напряжением.",
+        "en": "A cyber-gothic and industrial-chic collector: concrete, metal, neon accents. Buys portraits with psychological tension.",
+        "de": "Sammler von Cyber-Gothic und Industrie-Chic: Beton, Metall, Neon-Akzente. Kauft Porträts mit psychologischer Spannung."
+      },
+      "vibe": "cyber-gothic, industrial loft, tech-noir study",
+      "charPrompt": "A bald pale cyber-gothic woman with red irises, a red cheek heart, black lipstick, ear gauges, ribbed tubes from the back of her head, a gemmed choker and a pixel-heart chest patch.",
+      "tags": [
+        "doll",
+        "portrait",
+        "interior"
+      ]
+    },
+    {
+      "id": "14",
+      "slug": "shattered-glass-pierrot",
+      "title": {
+        "ru": "Пьеро за Разбитым Стеклом",
+        "en": "Pierrot Behind Shattered Glass",
+        "de": "Pierrot hinter zerbrochenem Glas"
+      },
+      "story": {
+        "ru": "Она прижала ладони к овалу, как к люку, из которого нет выхода. Красные глаза горят сквозь трещины, а звёзды в волосах - последняя корона номера. Зрители видят портрет; она видит свободу, которая уже треснула.",
+        "en": "She pressed her palms to the oval like a hatch with no exit. Red eyes burn through the cracks, and stars in her hair are the act's last crown. Viewers see a portrait; she sees freedom already fractured.",
+        "de": "Sie drückte die Handflächen an das Oval wie an eine Luke ohne Ausgang. Rote Augen brennen durch die Risse, und Sterne im Haar sind die letzte Krone der Nummer. Zuschauer sehen ein Porträt; sie sieht Freiheit, die bereits zersprungen ist."
+      },
+      "audience": {
+        "ru": "Коллекционер трагического цирка и «тёмной романтики». Ищет эмоциональный фокус для готического кабинета или спальни.",
+        "en": "A collector of tragic circus and dark romance. Seeks an emotional focal point for a gothic study or bedroom.",
+        "de": "Sammler von tragischem Zirkus und dunkler Romantik. Sucht einen emotionalen Fokus für gotisches Arbeitszimmer oder Schlafzimmer."
+      },
+      "vibe": "tragic circus, gothic study, surrealist gallery",
+      "charPrompt": "A female pierrot with glowing red eyes and a starry headband pressing her palms against shattered oval glass, framed by a starry black void.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "surreal"
+      ]
+    },
+    {
+      "id": "15",
+      "slug": "crimson-puppet-master",
+      "title": {
+        "ru": "Багровый Кукловод",
+        "en": "The Crimson Puppet Master",
+        "de": "Der Purpurne Puppenspieler"
+      },
+      "story": {
+        "ru": "Красный шут кружит её в воздухе, и мир делится на цвет и пепел. Он смеётся зубасто, она - спокойна, будто уже согласилась на вечный вальс. Их спираль - контракт: он ведёт, она парит, и антракта не будет.",
+        "en": "The red jester whirls her through the air, and the world splits into color and ash. He grins with teeth; she stays serene, as if she already agreed to an endless waltz. Their spiral is a contract: he leads, she floats, and there will be no intermission.",
+        "de": "Der rote Narr wirbelt sie durch die Luft, und die Welt teilt sich in Farbe und Asche. Er lacht zähnefletschend, sie bleibt ruhig, als hätte sie dem ewigen Walzer schon zugestimmt. Ihre Spirale ist ein Vertrag: er führt, sie schwebt, und es gibt kein Zwischenspiel."
+      },
+      "audience": {
+        "ru": "Покупатель театральных дуэтов и контрастных композиций. Любит чёрно-белый интерьер с одним кроваво-красным акцентом.",
+        "en": "A buyer of theatrical duets and high-contrast compositions. Loves black-and-white interiors with one blood-red accent.",
+        "de": "Käufer theatralischer Duette und Kontrastkompositionen. Liebt Schwarz-Weiß-Interieurs mit einem blutroten Akzent."
+      },
+      "vibe": "gothic circus, dark cabaret, noir loft",
+      "charPrompt": "A mischievous male jester in a solid red bodysuit and three-pointed bell cap dancing mid-air with a serene grayscale female pierrot in striped costume and ruff.",
+      "tags": [
+        "circus",
+        "theatre",
+        "doll",
+        "gothic"
+      ]
+    },
+    {
+      "id": "16",
+      "slug": "funeral-lily-hand",
+      "title": {
+        "ru": "Рука с Погребальной Лилией",
+        "en": "Hand with the Funeral Lily",
+        "de": "Hand mit der Trauerlilie"
+      },
+      "story": {
+        "ru": "Эта рука помнит ритуал лучше, чем молитву. Чёрные бусы скользят по пальцам, кольца кусают кожу, а красная лилия раскрывается как признание. Владелец цветка не утешает - он провожает.",
+        "en": "This hand remembers ritual better than prayer. Black beads slide over the fingers, rings bite the skin, and the red lily opens like a confession. The flower's keeper does not console - he escorts.",
+        "de": "Diese Hand kennt Ritual besser als Gebet. Schwarze Perlen gleiten über die Finger, Ringe beißen die Haut, und die rote Lilie öffnet sich wie ein Geständnis. Der Hüter der Blume tröstet nicht - er geleitet."
+      },
+      "audience": {
+        "ru": "Ценитель тёмной ботаники и оккультной элегантности. Повесит в кабинете, будуаре или в пространстве с бархатом и свечами.",
+        "en": "A lover of dark botanicals and occult elegance. Will hang it in a study, boudoir or a room of velvet and candles.",
+        "de": "Liebhaber dunkler Botanik und okkulter Eleganz. Hängt es im Arbeitszimmer, Boudoir oder in einem Raum mit Samt und Kerzen."
+      },
+      "vibe": "gothic romance, occult parlor, Victorian macabre",
+      "charPrompt": "An elegant pale grey hand with pointed nails, black rings and prayer beads emerging from a ruffled cuff, holding a vivid red lily with grey buds and leaves.",
+      "tags": [
+        "horror",
+        "interior"
+      ]
+    },
+    {
+      "id": "17",
+      "slug": "shrine-in-the-corset",
+      "title": {
+        "ru": "Святилище в Корсете",
+        "en": "Shrine in the Corset",
+        "de": "Schrein im Korsett"
+      },
+      "story": {
+        "ru": "У неё отняли голову и руки, но спрятали лицо в животе - как реликвию. Красные банты и звёзды на суставах делают куклу священной и сломанной одновременно. Маленькое лицо внутри смотрит грустно: оно знает, кто её разбирал.",
+        "en": "They took her head and arms, yet hid a face in her belly like a relic. Red bows and joint-stars make the doll sacred and broken at once. The tiny face inside looks sorrowful: it knows who dismantled her.",
+        "de": "Man nahm ihr Kopf und Arme, doch versteckte ein Gesicht im Bauch wie eine Reliquie. Rote Schleifen und Gelenksterne machen die Puppe heilig und zerbrochen zugleich. Das kleine Gesicht innen blickt traurig: es weiß, wer sie zerlegte."
+      },
+      "audience": {
+        "ru": "Коллекционер кукольного сюрреализма и BJD-эстетики. Ищет сильный вертикальный акцент для тёмной галереи.",
+        "en": "A collector of doll surrealism and BJD aesthetics. Seeks a strong vertical accent for a dark gallery wall.",
+        "de": "Sammler von Puppen-Surrealismus und BJD-Ästhetik. Sucht einen starken vertikalen Akzent für eine dunkle Galeriewand."
+      },
+      "vibe": "gothic boudoir, doll atelier, dark surreal gallery",
+      "charPrompt": "A headless armless mechanical doll torso in a black-and-white gothic corset with red bows, joint discs marked with red stars, and a small sad red-eyed face in a stomach shrine.",
+      "tags": [
+        "doll",
+        "surreal",
+        "mechanic",
+        "portrait"
+      ]
+    },
+    {
+      "id": "18",
+      "slug": "wasp-queen-of-silk",
+      "title": {
+        "ru": "Осиная Королева Шёлка",
+        "en": "Wasp Queen of Silk",
+        "de": "Wespenkönigin der Seide"
+      },
+      "story": {
+        "ru": "Она правит ульем, которого никто не видел. Бледные глаза без зрачков плетут чёрные нити, а жало горит красным обещанием. Сердце на хитине - не романтика, а герб укуса.",
+        "en": "She rules a hive no one has seen. Pupilless pale eyes weave black threads, and her stinger burns with a red promise. The heart on her chitin is not romance - it is a crest of the sting.",
+        "de": "Sie herrscht über einen Stock, den niemand sah. Pupillenlose blasse Augen weben schwarze Fäden, und ihr Stachel brennt mit rotem Versprechen. Das Herz auf dem Chitin ist keine Romantik - es ist das Wappen des Stichs."
+      },
+      "audience": {
+        "ru": "Покупатель femme fatale и dark fantasy: любит насекомых-монархов, корсеты и хищную грацию. Интерьер - тёмный салон или сюрреалистическая галерея.",
+        "en": "A buyer of femme fatale and dark fantasy: loves insect monarchs, corsets and predatory grace. Interior - dark salon or surrealist gallery.",
+        "de": "Käufer von Femme Fatale und Dark Fantasy: liebt Insekten-Monarchen, Korsetts und räuberische Anmut. Interieur - dunkler Salon oder surrealistische Galerie."
+      },
+      "vibe": "dark fantasy salon, gothic circus, surrealist loft",
+      "charPrompt": "A pale elfin wasp queen with pupilless white eyes, red gem crown, red mantle and black-white corset, segmented wasp abdomen with a red heart and red-tipped stinger, translucent wings and hooked insect legs.",
+      "tags": [
+        "circus",
+        "gothic",
+        "surreal",
+        "creature"
+      ]
+    },
+    {
+      "id": "19",
+      "slug": "contortionist-porcelain",
+      "title": {
+        "ru": "Фарфоровая Конторсионистка",
+        "en": "The Porcelain Contortionist",
+        "de": "Die Porzellan-Kontorsionistin"
+      },
+      "story": {
+        "ru": "Её суставы щёлкают, как аплодисменты, когда тело гнётся назад до невозможного. Красный колпак висит вверх ногами вместе с пустым лицом. Маленькие маски-бубенцы на нитях звенят каждый раз, когда она ломает геометрию боли.",
+        "en": "Her ball joints click like applause when the body bends backward past possibility. The red cap hangs upside down with a vacant face. Tiny mask-bells on threads chime each time she breaks the geometry of pain.",
+        "de": "Ihre Kugelgelenke klicken wie Applaus, wenn der Körper sich rückwärts über das Mögliche biegt. Die rote Kappe hängt kopfüber mit leerem Gesicht. Winzige Masken-Glöckchen an Fäden klingen, jedes Mal wenn sie die Geometrie des Schmerzes bricht."
+      },
+      "audience": {
+        "ru": "Ценитель кукольного хоррора и телесной сюрреалистики. Повесит в будуаре, студии или «тёмном цирковом» коридоре.",
+        "en": "A lover of doll horror and body surrealism. Will hang it in a boudoir, studio or dark-circus hallway.",
+        "de": "Liebhaber von Puppenhorror und Körpersurrealismus. Hängt es im Boudoir, Atelier oder dunklen Zirkus-Flur."
+      },
+      "vibe": "dark circus, gothic boudoir, macabre surrealism",
+      "charPrompt": "A cracked porcelain jester doll in an extreme backward contorted pose, red bicorn hat, black polka lace with red ruffles, striped stocking, and tiny jester-mask charms hanging from threads.",
+      "tags": [
+        "circus",
+        "doll",
+        "horror",
+        "surreal"
+      ]
+    },
+    {
+      "id": "20",
+      "slug": "last-performer-of-the-ruins",
+      "title": {
+        "ru": "Последний Артист Руин",
+        "en": "Last Performer of the Ruins",
+        "de": "Der Letzte Artist der Ruinen"
+      },
+      "story": {
+        "ru": "Шатёр рухнул, а она всё ещё сидит под баннером CIRCUS. Красные волосы - единственный цвет в сером пепле, белые глаза не ищут зрителя. Когда-то зал кричал; теперь ей достаточно тишины и камней под ногами.",
+        "en": "The tent collapsed, yet she still sits beneath the CIRCUS banner. Red hair is the only color in grey ash; white eyes do not seek an audience. Once the hall roared; now silence and stones underfoot are enough.",
+        "de": "Das Zelt stürzte ein, doch sie sitzt noch unter dem Banner CIRCUS. Rotes Haar ist die einzige Farbe in grauer Asche; weiße Augen suchen kein Publikum. Einst tobte der Saal; jetzt genügen Stille und Steine unter den Füßen."
+      },
+      "audience": {
+        "ru": "Коллекционер ностальгического макабра и больших нарративных сцен. Ищет картину-якорь для гостиной или лофта с индустриальными балками.",
+        "en": "A collector of nostalgic macabre and large narrative scenes. Seeks an anchor painting for a living room or loft with industrial beams.",
+        "de": "Sammler nostalgischen Makabers und großer Erzählzenen. Sucht ein Ankerbild für Wohnzimmer oder Loft mit Industriebalken."
+      },
+      "vibe": "abandoned carnival, gothic circus, decayed luxury loft",
+      "charPrompt": "A melancholic clown with voluminous red hair, white pupil-less eyes, huge ruff, red vest with white pom-poms and polka trousers, sitting among circus ruins under a dripping CIRCUS banner.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "horror"
+      ]
+    },
+    {
+      "id": "21",
+      "slug": "skull-chalice-toast",
+      "title": {
+        "ru": "Тост из Черепа",
+        "en": "Toast from the Skull Chalice",
+        "de": "Toast aus dem Schädelkelch"
+      },
+      "story": {
+        "ru": "Она пьёт молчание из черепа, на котором намалеваны те же звёзды, что у неё под глазом. Красная перчатка держит бокал-реликварию так нежно, будто это старый друг. В этом тосте нет веселья - только память о тех, кто уже ушёл за кулисы.",
+        "en": "She drinks silence from a skull painted with the same stars that sit beneath her eye. A red glove holds the chalice-reliquary so gently it might be an old friend. There is no cheer in this toast - only memory of those who already left backstage.",
+        "de": "Sie trinkt Stille aus einem Schädel, bemalt mit denselben Sternen wie unter ihrem Auge. Ein roter Handschuh hält den Kelch-Reliquiar so zart, als wäre er ein alter Freund. In diesem Toast steckt kein Jubel - nur Erinnerung an jene, die schon hinter die Kulissen gingen."
+      },
+      "audience": {
+        "ru": "Эстет тёмных салонов и noir-баров. Любит ритуальные предметы, театральный макияж и красно-чёрную палитру.",
+        "en": "An aesthete of dark salons and noir bars. Loves ritual objects, theatrical makeup and red-black palettes.",
+        "de": "Ästhet dunkler Salons und Noir-Bars. Liebt Ritualobjekte, theatralisches Make-up und Rot-Schwarz-Paletten."
+      },
+      "vibe": "noir lounge, gothic circus, dark salon",
+      "charPrompt": "A pale androgynous harlequin with red hair swirls, red eye and star marks, holding a human skull fashioned as a wine glass, wearing a large red neck bow and red glove.",
+      "tags": [
+        "circus",
+        "theatre",
+        "gothic",
+        "horror"
+      ]
+    },
+    {
+      "id": "22",
+      "slug": "grater-jester-and-mice",
+      "title": {
+        "ru": "Тёрка-Шут и Мыши",
+        "en": "The Grater Jester and Mice",
+        "de": "Der Reibe-Narr und die Mäuse"
+      },
+      "story": {
+        "ru": "Его тело - кухонный кошмар с улыбкой шута: внутри горошек, снаружи отверстия. Красные мыши сидят как придворные, держа сердце-сыр. Дом превращается в цирк, когда бытовые вещи учатся смеяться.",
+        "en": "His body is a kitchen nightmare with a jester's grin: polka dots inside, perforations outside. Red-eyed mice sit like courtiers, holding a heart of cheese. Home becomes circus when household things learn to laugh.",
+        "de": "Sein Körper ist ein Küchenalbtraum mit Narrenglinsen: innen Tupfen, außen Löcher. Rotäugige Mäuse sitzen wie Hofleute und halten ein Käseherz. Das Haus wird Zirkus, wenn Alltagsdinge lachen lernen."
+      },
+      "audience": {
+        "ru": "Покупатель surreal domestic и creepy-cute. Идеально для кухни-галереи, творческой студии или эксцентричного лофта.",
+        "en": "A buyer of surreal domestic and creepy-cute art. Ideal for a gallery-kitchen, creative studio or eccentric loft.",
+        "de": "Käufer von surrealem Domestic und Creepy-Cute. Ideal für Galerie-Küche, Kreativatelier oder exzentrisches Loft."
+      },
+      "vibe": "surreal kitchen, gothic nursery, eccentric loft",
+      "charPrompt": "A grinning jester doll with a cheese-grater lower body, red heart bodice, twin pigtails, and two red-eyed grey mice - one on its head, one holding a heart-shaped cheese.",
+      "tags": [
+        "circus",
+        "doll",
+        "horror",
+        "surreal"
+      ]
+    },
+    {
+      "id": "23",
+      "slug": "jester-with-the-lighter",
+      "title": {
+        "ru": "Шутиха с Зажигалкой",
+        "en": "Jester with the Lighter",
+        "de": "Närrin mit dem Feuerzeug"
+      },
+      "story": {
+        "ru": "Она сидит на краю сцены, и пламя в руке меньше, чем её улыбка. Красные вихри за спиной уже репетируют финал. Ей не нужна толпа - достаточно одной искры и правильного зрителя.",
+        "en": "She perches on the stage edge, and the flame in her hand is smaller than her grin. Red swirls behind her already rehearse the finale. She needs no crowd - only one spark and the right spectator.",
+        "de": "Sie hockt am Bühnenrand, und die Flamme in ihrer Hand ist kleiner als ihr Grinsen. Rote Wirbel hinter ihr proben schon das Finale. Sie braucht keine Menge - nur einen Funken und den richtigen Zuschauer."
+      },
+      "audience": {
+        "ru": "Коллекционер тёмного кабаре и «опасных» персонажей. Повесит в кабинете, баре или студии с чёрно-красным акцентом.",
+        "en": "A collector of dark cabaret and dangerous characters. Will hang it in a study, bar or studio with black-red accents.",
+        "de": "Sammler von dunklem Kabarett und gefährlichen Charakteren. Hängt es im Arbeitszimmer, in der Bar oder im Atelier mit Schwarz-Rot-Akzent."
+      },
+      "vibe": "dark cabaret, gothic study, industrial loft",
+      "charPrompt": "A grinning female gothic jester with curly ash-grey hair, black-and-red ruffled circus outfit, striped stockings and pointed boots, holding a lit lighter against swirling red-black energy.",
+      "tags": [
+        "circus",
+        "theatre",
+        "doll",
+        "gothic"
+      ]
+    },
+    {
+      "id": "24",
+      "slug": "mask-and-the-mourner",
+      "title": {
+        "ru": "Маска и Плакальщица",
+        "en": "The Mask and the Mourner",
+        "de": "Die Maske und die Trauernde"
+      },
+      "story": {
+        "ru": "Её собственное лицо молчит слезами, а маска на палочке хохочет за двоих. Красная звезда на чужом глазу - чужая роль, которую она носит как щит. В цирке правда редко выходит без грима.",
+        "en": "Her own face stays silent with teardrops, while the mask on a stick laughs for two. The red star on the false eye is a borrowed role she wears like a shield. In the circus, truth rarely walks out without makeup.",
+        "de": "Ihr eigenes Gesicht schweigt mit Tränen, während die Maske am Stab für zwei lacht. Der rote Stern auf dem fremden Auge ist eine geliehene Rolle, die sie wie einen Schild trägt. Im Zirkus geht Wahrheit selten ohne Schminke hinaus."
+      },
+      "audience": {
+        "ru": "Ценитель двойничества и театральной психологии. Ищет камерный портрет для тёмного будуара или кабинета.",
+        "en": "A lover of doubles and theatrical psychology. Seeks an intimate portrait for a dark boudoir or study.",
+        "de": "Liebhaber von Doppelgängern und Theaterpsychologie. Sucht ein intimes Porträt für dunkles Boudoir oder Arbeitszimmer."
+      },
+      "vibe": "gothic circus, theatrical noir, dark boudoir",
+      "charPrompt": "A pale female harlequin in a black hood with antennae and checkered ruff, red eyes and teardrop makeup, holding a manic grinning jester mask on a red stick.",
+      "tags": [
+        "circus",
+        "theatre",
+        "doll",
+        "gothic"
+      ]
+    },
+    {
+      "id": "25",
+      "slug": "heir-of-hungry-play",
+      "title": {
+        "ru": "Наследник Голодной Игры",
+        "en": "Heir of the Hungry Game",
+        "de": "Erbe des Hungrigen Spiels"
+      },
+      "story": {
+        "ru": "Он родился с пастью вместо колыбельной. Красный колпак, соска на бусах и звёздные зрачки - милые знаки чудовища, которое играет куклами слишком серьёзно. За спиной - сердце тьмы, перед ним - чужая голова в зубах.",
+        "en": "He was born with a maw instead of a lullaby. Red hat, pacifier on beads and star pupils are cute marks of a monster that plays with dolls too seriously. Behind him - a heart of darkness; in his teeth - another's head.",
+        "de": "Er wurde mit einem Rachen statt eines Wiegenlieds geboren. Rote Kappe, Schnuller an Perlen und Sternpupillen sind niedliche Zeichen eines Monsters, das zu ernst mit Puppen spielt. Hinter ihm - ein Herz der Finsternis; in den Zähnen - ein fremder Kopf."
+      },
+      "audience": {
+        "ru": "Коллекционер creepy-cute horror и тёмного юмора. Подойдёт для студии, кабинета редкостей или стены с «плохими детьми» арта.",
+        "en": "A collector of creepy-cute horror and dark humor. Fits a studio, curiosity study or a wall of bad-children art.",
+        "de": "Sammler von Creepy-Cute-Horror und schwarzem Humor. Passt zu Atelier, Kuriositätenkabinett oder einer Wand mit Bad-Children-Art."
+      },
+      "vibe": "macabre nursery, dark surrealism, gothic horror den",
+      "charPrompt": "A chubby grey baby jester with pink-red star pupils, red heart-studded hat, red bead necklace with pacifier, biting a smaller doll's head against a jagged black heart.",
+      "tags": [
+        "doll",
+        "horror",
+        "surreal",
+        "nursery"
+      ]
+    },
+    {
+      "id": "26",
+      "slug": "bound-fawn-of-three-eyes",
+      "title": {
+        "ru": "Связанный Оленёнок Трёх Глаз",
+        "en": "Bound Fawn of Three Eyes",
+        "de": "Gebundenes Reh mit Drei Augen"
+      },
+      "story": {
+        "ru": "Его связали красной верёвкой не для унижения - для сохранения. Третий глаз на лбу видит, куда нельзя бежать, а белые крылья помнят небо, которого больше нет. В чёрном поле звёзды - как гвозди обета.",
+        "en": "They bound him in red rope not to shame him - to keep him. The third eye on his brow sees where he must not run, and white wings remember a sky that is gone. In the black field, stars are like nails of a vow.",
+        "de": "Sie banden ihn mit rotem Seil nicht zur Schande - zum Bewahren. Das dritte Auge auf der Stirn sieht, wohin er nicht laufen darf, und weiße Flügel erinnern einen Himmel, den es nicht mehr gibt. Im schwarzen Feld sind Sterne wie Nägel eines Gelübdes."
+      },
+      "audience": {
+        "ru": "Покупатель оккультной поэзии и soft-horror. Любит тёмные кабинеты, бархат и символические животные портреты.",
+        "en": "A buyer of occult poetry and soft horror. Loves dark studies, velvet and symbolic animal portraits.",
+        "de": "Käufer okkulter Poesie und Soft Horror. Liebt dunkle Arbeitszimmer, Samt und symbolische Tierporträts."
+      },
+      "vibe": "occult parlor, gothic study, dark fairy-tale wall",
+      "charPrompt": "A grey spotted fawn with three eyes, small red horns and white swan wings, wrapped in red shibari-like rope, floating against a black field with red spark stars.",
+      "tags": [
+        "horror",
+        "creature",
+        "portrait",
+        "interior"
+      ]
+    },
+    {
+      "id": "27",
+      "slug": "stitched-keeper-of-shadows",
+      "title": {
+        "ru": "Сшитая Хранительница Теней",
+        "en": "Stitched Keeper of Shadows",
+        "de": "Genähte Hüterin der Schatten"
+      },
+      "story": {
+        "ru": "Её рот зашили, чтобы тени говорили вместо неё. Кнопка и крест вместо глаз видят только тех, кто достоин номера. Палочки в руках отбивают ритм, под который пляшут чёрные духи со спиральными зрачками.",
+        "en": "They stitched her mouth shut so shadows could speak for her. A button and a cross for eyes see only those worthy of the act. Mallets in her hands keep the beat for black spirits with spiral pupils.",
+        "de": "Man nähte ihr den Mund zu, damit Schatten für sie sprechen. Knopf und Kreuz statt Augen sehen nur, wer der Nummer würdig ist. Schlegel in ihren Händen halten den Takt für schwarze Geister mit Spiralpupillen."
+      },
+      "audience": {
+        "ru": "Коллекционер кукольного dark circus и персонажных историй. Ищет сильный character piece для стены над консолью или камином.",
+        "en": "A collector of dollish dark circus and character stories. Seeks a strong character piece above a console or fireplace.",
+        "de": "Sammler puppenhaften dunklen Zirkus und Charaktergeschichten. Sucht ein starkes Charakterstück über Konsole oder Kamin."
+      },
+      "vibe": "dark circus, gothic study, macabre toy chest",
+      "charPrompt": "A gothic stitched doll with long black hair, button and X eyes, spiral cheek marks, striped dress and red boots, holding mallets on a geometric pedestal, surrounded by grinning black shadow spirits.",
+      "tags": [
+        "circus",
+        "doll",
+        "horror"
+      ]
+    },
+    {
+      "id": "28",
+      "slug": "abyssal-star-maw",
+      "title": {
+        "ru": "Бездонная Звёздная Пасть",
+        "en": "The Abyssal Star Maw",
+        "de": "Der Abgrund-Sternrachen"
+      },
+      "story": {
+        "ru": "Оно выросло из тёмной воды под манежем, где зрители теряли монеты и имена. Пять рук-лучей тянутся к свету, а пасть в центре никогда не бывает сытой. Розовое свечение - приманка, а не нежность.",
+        "en": "It grew from dark water beneath the arena where audiences lost coins and names. Five ray-arms reach toward light, and the central maw is never full. The pink glow is bait, not tenderness.",
+        "de": "Es wuchs aus dunklem Wasser unter der Manege, wo Zuschauer Münzen und Namen verloren. Fünf Strahlenarme greifen zum Licht, und der zentrale Rachen ist nie satt. Das rosa Leuchten ist Köder, keine Zärtlichkeit."
+      },
+      "audience": {
+        "ru": "Покупатель элдрического хоррора и биоморфного арта. Любит тёмные кабинеты, лаборатории эстетики и «опасные» акценты.",
+        "en": "A buyer of eldritch horror and biomorphic art. Loves dark studies, lab aesthetics and dangerous accents.",
+        "de": "Käufer von Eldritch Horror und biomorpher Kunst. Liebt dunkle Arbeitszimmer, Laborästhetik und gefährliche Akzente."
+      },
+      "vibe": "eldritch horror, occult laboratory, dark gothic study",
+      "charPrompt": "A five-armed red starfish-like creature with a black diamond grid, thorned edges, a circular needle-tooth maw with saliva strands, dark tentacles and a soft pink glowing orb.",
+      "tags": [
+        "circus",
+        "horror",
+        "interior"
+      ]
+    },
+    {
+      "id": "29",
+      "slug": "thorn-crowned-rabbit",
+      "title": {
+        "ru": "Кролик в Терновом Венце",
+        "en": "Rabbit in a Crown of Thorns",
+        "de": "Hase mit Dornenkrone"
+      },
+      "story": {
+        "ru": "Его глаза-пуговицы видели слишком много королевских игр. В ухе открылась пасть, а нога стала веткой - будто лес забрал часть долга. Воротник пьеро и сердца на шортах не спасают от грибов, выросших вокруг жертвы.",
+        "en": "His button eyes saw too many royal games. A mouth opened in one ear, and a leg became a branch - as if the forest collected part of the debt. A pierrot collar and hearts on bloomers do not save him from mushrooms grown around the sacrifice.",
+        "de": "Seine Knopfaugen sahen zu viele Königsspiele. In einem Ohr öffnete sich ein Maul, und ein Bein wurde zum Ast - als hätte der Wald einen Teil der Schuld eingezogen. Pierrot-Kragen und Herzen auf der Hose retten nicht vor Pilzen um das Opfer."
+      },
+      "audience": {
+        "ru": "Ценитель dark Alice и готического фольклора. Повесит в кабинете, детской взрослого коллекционера или в галерее сказочного хоррора.",
+        "en": "A lover of dark Alice and gothic folklore. Will hang it in a study, adult dark nursery or fairy-tale horror gallery.",
+        "de": "Liebhaber von Dark Alice und gotischer Folklore. Hängt es im Arbeitszimmer, in dunkler Sammler-Kinderstube oder Märchenhorror-Galerie."
+      },
+      "vibe": "dark wonderland, gothic nursery, curiosity cabinet",
+      "charPrompt": "A crouching black-grey rabbit with a white thorn crown, mismatched button eyes with red tears, a toothy mouth in one ear, pierrot ruff, heart-grid bloomers and one wooden branch leg among black mushrooms.",
+      "tags": [
+        "doll",
+        "gothic",
+        "horror",
+        "royal"
+      ]
+    },
+    {
+      "id": "30",
+      "slug": "coronation-in-blood",
+      "title": {
+        "ru": "Коронация в Крови",
+        "en": "Coronation in Blood",
+        "de": "Krönung in Blut"
+      },
+      "story": {
+        "ru": "Она поднимает корону обеими руками, и кровь стекает по закрытым векам, как слёзы победы. Шутовской колпак уже надет - значит, власть будет смешной и жестокой. Кукольные суставы плеч напоминают: королеву тоже собирали по частям.",
+        "en": "She lifts the crown with both hands, and blood runs down closed lids like tears of victory. The jester's hat is already on - so power will be comic and cruel. Ball-jointed shoulders remind you the queen was assembled in pieces too.",
+        "de": "Sie hebt die Krone mit beiden Händen, und Blut rinnt über geschlossene Lider wie Tränen des Siegs. Die Narrenkappe sitzt schon - also wird Macht komisch und grausam sein. Kugelgelenke an den Schultern erinnern: auch die Königin wurde aus Teilen gebaut."
+      },
+      "audience": {
+        "ru": "Коллекционер трагической королевской эстетики и кукольного сюра. Ищет драматический портрет для тёмной галереи.",
+        "en": "A collector of tragic royal aesthetics and doll surrealism. Seeks a dramatic portrait for a dark gallery.",
+        "de": "Sammler tragischer Königsästhetik und Puppen-Surrealismus. Sucht ein dramatisches Porträt für eine dunkle Galerie."
+      },
+      "vibe": "gothic circus, dark academia, Victorian macabre",
+      "charPrompt": "A pale female doll-jester with closed eyes, lifting a black crown while red blood streams down her face, wearing a harlequin bicorn, striped bodice and ball-jointed shoulders.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "horror"
+      ]
+    },
+    {
+      "id": "31",
+      "slug": "puppeteer-of-the-heart",
+      "title": {
+        "ru": "Кукловод Сердца",
+        "en": "Puppeteer of the Heart",
+        "de": "Puppenspielerin des Herzens"
+      },
+      "story": {
+        "ru": "Она плетёт красные нити вокруг живого сердца, как вокруг марионетки. Улыбка острая, слёзы нарисованы - эмоции здесь ручной работы. Кто отдаёт ей сердце, получает представление вместо покоя.",
+        "en": "She weaves red threads around a living heart as if around a marionette. The smile is sharp, the tears are painted - emotion here is handmade. Whoever gives her a heart receives a performance instead of peace.",
+        "de": "Sie flicht rote Fäden um ein lebendiges Herz wie um eine Marionette. Das Lächeln ist scharf, die Tränen gemalt - Gefühl ist hier Handarbeit. Wer ihr ein Herz gibt, erhält eine Aufführung statt Ruhe."
+      },
+      "audience": {
+        "ru": "Покупатель психологического dark art и метафор контроля. Любит камерные портреты в чёрно-белом с одним красным акцентом.",
+        "en": "A buyer of psychological dark art and control metaphors. Loves intimate portraits in black-and-white with one red accent.",
+        "de": "Käufer psychologischer Dark Art und Kontrollmetaphern. Liebt intime Porträts in Schwarz-Weiß mit einem roten Akzent."
+      },
+      "vibe": "gothic circus, dark study, surrealist gallery",
+      "charPrompt": "A pale female jester with red pupils, black teardrops and a wide painted smile, weaving red thread around an anatomical red heart between clawed hands.",
+      "tags": [
+        "circus",
+        "doll",
+        "gothic",
+        "surreal"
+      ]
+    },
+    {
+      "id": "32",
+      "slug": "mustache-masquerade",
+      "title": {
+        "ru": "Маскарад с Усами",
+        "en": "Mustache Masquerade",
+        "de": "Schnurrbart-Maskerade"
+      },
+      "story": {
+        "ru": "Она держит фальшивые усы на палочке - и зал уже не уверен, кого видит. Красный бант и цилиндр обещают шутку, а взгляд обещает другое. В этом маскараде правда прячется в кудрях и звёздах.",
+        "en": "She holds a fake mustache on a stick - and the hall no longer knows who it sees. A red bow and top hat promise a joke; the gaze promises otherwise. In this masquerade, truth hides in curls and stars.",
+        "de": "Sie hält einen falschen Schnurrbart am Stab - und der Saal weiß nicht mehr, wen er sieht. Rote Schleife und Zylinder versprechen einen Scherz; der Blick verspricht etwas anderes. In dieser Maskerade versteckt sich Wahrheit in Locken und Sternen."
+      },
+      "audience": {
+        "ru": "Эстет кабаре и гендерной игры образов. Повесит в гостиной с театральным светом или в творческой студии.",
+        "en": "An aesthete of cabaret and playful gendered images. Will hang it in a living room with stage light or a creative studio.",
+        "de": "Ästhet von Kabarett und spielerischer Geschlechterbilder. Hängt es im Wohnzimmer mit Bühnenlicht oder im Kreativatelier."
+      },
+      "vibe": "dark cabaret, theatrical loft, gothic lounge",
+      "charPrompt": "An androgynous circus performer with grey swirled curls, red eyes and tear lines, pink top hat, red bow tie and striped sleeves, holding a fake mustache on a stick against a starry black oval.",
+      "tags": [
+        "circus",
+        "theatre",
+        "doll",
+        "gothic"
+      ]
+    },
+    {
+      "id": "33",
+      "slug": "crimson-print-fool",
+      "title": {
+        "ru": "Багровый Оттиск Шута",
+        "en": "The Crimson Print Fool",
+        "de": "Der Purpurdruck-Narr"
+      },
+      "story": {
+        "ru": "Его лицо отпечатали кровью типографии и тишиной зала. Белые прорези глаз видят только тех, кто готов к монологу без слов. Первый лист печати - как первое признание: линия уже не стереть.",
+        "en": "His face was printed in the blood of the press and the silence of the hall. White eye-slits see only those ready for a wordless monologue. The first print sheet is a first confession: the line will not erase.",
+        "de": "Sein Gesicht wurde mit dem Blut der Presse und der Stille des Saals gedruckt. Weiße Augenschlitze sehen nur, wer bereit ist für einen wortlosen Monolog. Das erste Druckblatt ist ein erstes Geständnis: die Linie lässt sich nicht löschen."
+      },
+      "audience": {
+        "ru": "Коллекционер графики, принтов и минималистичного dark art. Любит чистые стены, акцентные работы и типографскую эстетику.",
+        "en": "A collector of prints, graphics and minimal dark art. Loves clean walls, accent pieces and typographic aesthetics.",
+        "de": "Sammler von Druckgrafik und minimaler Dark Art. Liebt klare Wände, Akzentwerke und typografische Ästhetik."
+      },
+      "vibe": "gothic study, dark academia, print gallery wall",
+      "charPrompt": "A gothic jester bust in monochrome burgundy, with a three-pointed hat, pointed ears, dramatic pierrot eye makeup and a large pleated ruff, linocut print texture.",
+      "tags": [
+        "doll",
+        "horror"
+      ]
+    },
+    {
+      "id": "34",
+      "slug": "midnight-pierrot",
+      "title": {
+        "ru": "Полуночный Пьеро",
+        "en": "Midnight Pierrot",
+        "de": "Mitternachts-Pierrot"
+      },
+      "story": {
+        "ru": "Он выходит из чёрного поля, как голос без микрофона. Тёмные глазницы и жёсткий воротник хранят усталость аристократа, который слишком долго играл шута. Звезда у виска - единственный выход на бис.",
+        "en": "He steps from a black field like a voice without a microphone. Dark eye hollows and a stiff ruff keep the weariness of an aristocrat who played the fool too long. The star at his temple is the only encore exit.",
+        "de": "Er tritt aus dem schwarzen Feld wie eine Stimme ohne Mikrofon. Dunkle Augenhöhlen und steife Krause bewahren die Müdigkeit eines Aristokraten, der zu lange den Narren spielte. Der Stern an der Schläfe ist der einzige Zugabe-Ausgang."
+      },
+      "audience": {
+        "ru": "Ценитель монохромного портрета и dark academia. Ищет тихую, сильную работу для кабинета или библиотеки.",
+        "en": "A lover of monochrome portraiture and dark academia. Seeks a quiet, strong piece for a study or library.",
+        "de": "Liebhaber monochromer Porträts und Dark Academia. Sucht ein stilles, starkes Werk für Arbeitszimmer oder Bibliothek."
+      },
+      "vibe": "dark academia, gothic study, noir lounge",
+      "charPrompt": "A melancholic gothic pierrot with white face paint, dark hollowed teardrop eye makeup, wavy dark hair, a small radiating star at the temple and a large pleated ruff, high-contrast monochrome.",
+      "tags": [
+        "doll",
+        "portrait",
+        "interior"
+      ]
+    },
+    {
+      "id": "35",
+      "slug": "pigeon-and-the-candy-blade",
+      "title": {
+        "ru": "Голубь и Конфетный Клинок",
+        "en": "Pigeon and the Candy Blade",
+        "de": "Taube und die Zuckerklinge"
+      },
+      "story": {
+        "ru": "Его улыбка полна треугольных зубов, а через челюсть проходит полосатый штырь - сладкий и смертельный. Голубь с крестом вместо глаза сидит как мёртвый свидетель номера. Звезда на лбу обещает, что это всё ещё представление.",
+        "en": "His smile is full of triangular teeth, and a striped skewer runs through the jaw - sweet and lethal. A pigeon with an X for an eye sits as a dead witness to the act. The star on his brow promises this is still a show.",
+        "de": "Sein Lächeln steckt voller Dreieckszähne, und ein gestreifter Spieß geht durch den Kiefer - süß und tödlich. Eine Taube mit X-Auge sitzt als toter Zeuge der Nummer. Der Stern auf der Stirn verspricht: es ist immer noch eine Show."
+      },
+      "audience": {
+        "ru": "Покупатель гротескного циркового хоррора. Любит смелые портреты для индустриального лофта или частной галереи.",
+        "en": "A buyer of grotesque circus horror. Loves bold portraits for an industrial loft or private gallery.",
+        "de": "Käufer grotesken Zirkus-Horrors. Liebt kühne Porträts für Industrie-Loft oder Privatgalerie."
+      },
+      "vibe": "macabre gallery, gothic study, dark carnival",
+      "charPrompt": "A grotesquely distorted clown with a bulbous pink nose, shark-like teeth, red star on the forehead, candy-striped skewer piercing the jaw, and a dead grey pigeon with X eyes perched behind him.",
+      "tags": [
+        "circus",
+        "doll",
+        "horror",
+        "creature"
+      ]
+    },
+    {
+      "id": "36",
+      "slug": "screaming-queen-of-spades",
+      "title": {
+        "ru": "Кричащая Дама Пик",
+        "en": "The Screaming Queen of Spades",
+        "de": "Die Schreiende Pik-Dame"
+      },
+      "story": {
+        "ru": "Её крик расколол зеркало колоды. Пика на щеке и сердца на воротнике - герб ярости, которую веками держали в клетке карт. Один глаз достаточно, чтобы приговорить весь стол.",
+        "en": "Her scream cracked the deck's mirror. A spade on the cheek and hearts on the collar are the crest of a rage caged in cards for centuries. One eye is enough to sentence the whole table.",
+        "de": "Ihr Schrei zerbrach den Spiegel des Kartenspiels. Pik auf der Wange und Herzen am Kragen sind das Wappen einer Wut, die Jahrhunderte in Karten gefangen war. Ein Auge genügt, um den ganzen Tisch zu verurteilen."
+      },
+      "audience": {
+        "ru": "Коллекционер карточной мифологии и экспрессивного сюра. Ищет энергичный акцент для тёмного максимализма.",
+        "en": "A collector of card mythology and expressive surrealism. Seeks an energetic accent for dark maximalism.",
+        "de": "Sammler von Kartenmythologie und expressivem Surrealismus. Sucht einen energischen Akzent für dunklen Maximalismus."
+      },
+      "vibe": "dark maximalist lounge, gothic study, surreal gallery",
+      "charPrompt": "A grotesque screaming queen-of-hearts figure with one bulging bloodshot eye, glossy red lips, a spade mark on the cheek and a white heart-patterned collar against deep blue-black.",
+      "tags": [
+        "surreal",
+        "royal"
+      ]
+    },
+    {
+      "id": "37",
+      "slug": "keeper-of-the-molar",
+      "title": {
+        "ru": "Хранительница Моляра",
+        "en": "Keeper of the Molar",
+        "de": "Hüterin des Backenzahns"
+      },
+      "story": {
+        "ru": "Белая мышь с ключом на шее собирает то, что люди теряют во сне. Зуб в лапах - карта боли, звезда на лбу - пропуск в чужие сны. Пластырь на ноге напоминает: даже хранители хромают.",
+        "en": "A white mouse with a key at her neck gathers what people lose in sleep. The tooth in her paws is a map of pain; the star on her brow is a pass into borrowed dreams. The bandage on her leg reminds you even keepers limp.",
+        "de": "Eine weiße Maus mit Schlüssel am Hals sammelt, was Menschen im Schlaf verlieren. Der Zahn in den Pfoten ist eine Karte des Schmerzes; der Stern auf der Stirn ein Pass in fremde Träume. Das Pflaster am Bein erinnert: auch Hüter hinken."
+      },
+      "audience": {
+        "ru": "Покупатель символического creepy-cute и маленьких талисманов. Идеально для кабинета, детской коллекционера или полки редкостей.",
+        "en": "A buyer of symbolic creepy-cute and small talismans. Ideal for a study, collector's nursery or rarity shelf wall.",
+        "de": "Käufer symbolischen Creepy-Cute und kleiner Talismane. Ideal für Arbeitszimmer, Sammler-Kinderstube oder Kuriositätenwand."
+      },
+      "vibe": "gothic nursery, surrealist gallery, dark whimsical study",
+      "charPrompt": "A bipedal white mouse with large pink ears, a red forehead star, glowing orange harlequin-lined eye, black paws, key necklace and bandage on a hind leg, clutching a large human molar against a red field.",
+      "tags": [
+        "surreal",
+        "creature",
+        "nursery",
+        "interior"
+      ]
+    },
+    {
+      "id": "38",
+      "slug": "master-of-whispers",
+      "title": {
+        "ru": "Мастер Шёпота",
+        "en": "Master of Whispers",
+        "de": "Meister der Flüster"
+      },
+      "story": {
+        "ru": "Он почти не открывает рот - секреты проходят через улыбку сами. Красный капюшон и огромный нос делают его шутом и исповедником одновременно. Кто наклоняется ближе, слышит не шутку, а приговор.",
+        "en": "He barely opens his mouth - secrets pass through the smile on their own. A crimson hood and enormous nose make him jester and confessor at once. Whoever leans closer hears not a joke but a sentence.",
+        "de": "Er öffnet den Mund kaum - Geheimnisse gehen von selbst durch das Lächeln. Rote Kapuze und riesige Nase machen ihn zum Narren und Beichtvater zugleich. Wer näher kommt, hört keinen Scherz, sondern ein Urteil."
+      },
+      "audience": {
+        "ru": "Ценитель камерного гротеска и театральных лиц. Повесит в салоне, кабинете или у барной стойки как «разговорную» работу.",
+        "en": "A lover of intimate grotesque and theatrical faces. Will hang it in a salon, study or by the bar as a conversation piece.",
+        "de": "Liebhaber intimen Grotesken und Theatergesichter. Hängt es im Salon, Arbeitszimmer oder an der Bar als Gesprächsstück."
+      },
+      "vibe": "theatrical lounge, gothic study, eccentric gallery",
+      "charPrompt": "A stylized gothic jester bust with a large bulbous nose, pointed ear with red piercings, pupilless white eyes under heavy red lids, crimson hood and a knowing cupid-bow smirk.",
+      "tags": [
+        "theatre",
+        "doll",
+        "interior"
+      ]
+    },
+    {
+      "id": "39",
+      "slug": "two-eyed-swan-abyss",
+      "title": {
+        "ru": "Лебедь Двух Глаз",
+        "en": "Swan of Two Eyes",
+        "de": "Schwan der Zwei Augen"
+      },
+      "story": {
+        "ru": "Он выплыл из чёрной пустоты с сердцем на щеке и вторым глазом в теле. Оранжевые лапы слишком велики для воды - они держат баланс между сказкой и кошмаром. Лента за шеей - след того, кто пытался его приручить.",
+        "en": "He surfaced from a black void with a heart on his cheek and a second eye in his body. Orange webbed feet are too large for water - they balance fairy tale and nightmare. The ribbon behind the neck is a trace of whoever tried to tame him.",
+        "de": "Er tauchte aus schwarzer Leere auf, mit einem Herz auf der Wange und einem zweiten Auge im Körper. Orange Schwimmfüße sind zu groß fürs Wasser - sie halten das Gleichgewicht zwischen Märchen und Albtraum. Das Band hinter dem Hals ist die Spur dessen, der ihn zähmen wollte."
+      },
+      "audience": {
+        "ru": "Коллекционер pop-surreal и необычных животных. Любит контрастные работы на чёрном фоне для современной галереи.",
+        "en": "A collector of pop-surreal and unusual animals. Loves high-contrast pieces on black for a contemporary gallery wall.",
+        "de": "Sammler von Pop-Surreal und ungewöhnlichen Tieren. Liebt Kontrastwerke auf Schwarz für zeitgenössische Galeriewände."
+      },
+      "vibe": "dark pop surrealism, modern gothic gallery, edgy loft",
+      "charPrompt": "A pale lavender surreal swan with a bright orange beak, heavy-lidded red eye with a heart beauty mark, a large blue eye in the lower body, magenta ribbon and oversized orange webbed feet on black.",
+      "tags": [
+        "horror",
+        "surreal",
+        "interior"
+      ]
+    },
+    {
+      "id": "40",
+      "slug": "poodle-of-the-second-mouth",
+      "title": {
+        "ru": "Пудель Второй Пасти",
+        "en": "Poodle of the Second Mouth",
+        "de": "Pudel mit dem Zweiten Maul"
+      },
+      "story": {
+        "ru": "Розовый пудель улыбался, пока щёку не разорвало второй улыбкой. Игольные зубы и слюна - новая дрессировка, которую никто не заказывал. Звёзды за спиной мигают, будто цирк всё ещё идёт.",
+        "en": "The pink poodle smiled until a second smile tore open its cheek. Needle teeth and drool are a new training no one ordered. Stars behind it blink as if the circus is still running.",
+        "de": "Der rosa Pudel lächelte, bis ein zweites Lächeln die Wange aufgerissen hat. Nadelzähne und Speichel sind eine neue Dressur, die niemand bestellt hat. Sterne hinter ihm blinken, als liefe der Zirkus noch."
+      },
+      "audience": {
+        "ru": "Покупатель body-horror chic и провокационного арта. Ищет смелый акцент для индустриального лофта или частного бара.",
+        "en": "A buyer of body-horror chic and provocative art. Seeks a bold accent for an industrial loft or private bar.",
+        "de": "Käufer von Body-Horror-Chic und provokativer Kunst. Sucht einen kühnen Akzent für Industrie-Loft oder Privatbar."
+      },
+      "vibe": "gothic horror, dark surrealism, industrial loft",
+      "charPrompt": "A monstrous pink poodle head with fleshy pompom forms, glowing yellow eyes, and a second cheek-splitting maw of needle teeth dripping white slime against dark blue with black stars.",
+      "tags": [
+        "circus",
+        "horror",
+        "surreal",
+        "interior"
+      ]
+    },
+    {
+      "id": "41",
+      "slug": "red-star-rogue",
+      "title": {
+        "ru": "Плут Красной Звезды",
+        "en": "The Red Star Rogue",
+        "de": "Der Rotstern-Gauner"
+      },
+      "story": {
+        "ru": "Маска и шапочка прячут брови, но не прячут намерение. Огромный нос и подбородок - карикатура злодея, который слишком любит собственный смех. Красная звезда у виска - клеймо труппы, из которой он так и не ушёл.",
+        "en": "Mask and beanie hide the brows, not the intent. Huge nose and cleft chin are a villain's caricature who loves his own laugh too much. The red star at the temple is the troupe's brand he never left.",
+        "de": "Maske und Mütze verbergen die Brauen, nicht die Absicht. Riesige Nase und Kinnspalte sind die Karikatur eines Bösewichts, der sein eigenes Lachen zu sehr liebt. Der rote Stern an der Schläfe ist das Brandzeichen der Truppe, die er nie verließ."
+      },
+      "audience": {
+        "ru": "Ценитель гротескных портретов и noir-цирка. Повесит в мужском кабинете, баре или эклектичном лофте.",
+        "en": "A lover of grotesque portraits and noir circus. Will hang it in a masculine study, bar or eclectic loft.",
+        "de": "Liebhaber grotesker Porträts und Noir-Zirkus. Hängt es im Herrenarbeitszimmer, in der Bar oder im eklektischen Loft."
+      },
+      "vibe": "noir circus, gothic study, eclectic loft",
+      "charPrompt": "A sinister caricature man with a huge bulbous nose, massive cleft chin, black eye mask with a red star, black beanie and a wide toothy grin against dark burgundy with an orange-red halo.",
+      "tags": [
+        "circus",
+        "portrait",
+        "interior"
+      ]
+    },
+    {
+      "id": "42",
+      "slug": "blue-eyed-gap-smile",
+      "title": {
+        "ru": "Голубоглазая Улыбка с Щелью",
+        "en": "Blue-Eyed Gap Smile",
+        "de": "Blauäugiges Lücke-Lächeln"
+      },
+      "story": {
+        "ru": "Её улыбка не гаснет после антракта - она стала профессией. Голубые глаза светятся сквозь чёрные линии пьеро, а щель между зубами делает жуткое почти милым. В тёмном фоне она - фонарь забытого карнавала.",
+        "en": "Her smile does not fade after intermission - it became a profession. Blue eyes glow through pierrot black lines, and the gap between teeth makes the eerie almost sweet. Against the dark, she is a lantern of a forgotten carnival.",
+        "de": "Ihr Lächeln erlischt nicht nach der Pause - es wurde Beruf. Blaue Augen leuchten durch schwarze Pierrot-Linien, und die Zahnlücke macht das Unheimliche fast süß. Im Dunkeln ist sie die Laterne eines vergessenen Karnevals."
+      },
+      "audience": {
+        "ru": "Коллекционер камерных портретов и creepy-cute. Ищет работу для тёмной гостиной, студии или коридора-галереи.",
+        "en": "A collector of intimate portraits and creepy-cute. Seeks a piece for a dark living room, studio or gallery hallway.",
+        "de": "Sammler intimer Porträts und Creepy-Cute. Sucht ein Werk für dunkles Wohnzimmer, Atelier oder Galerieflur."
+      },
+      "vibe": "gothic study, dark academia, eccentric loft",
+      "charPrompt": "A pale woman with a high blonde bun, luminous blue eyes crossed by vertical black clown lines, bulbous red nose and a wide gap-toothed manic grin with deep red lipstick.",
+      "tags": [
+        "doll",
+        "portrait",
+        "interior"
+      ]
+    },
+    {
+      "id": "43",
+      "slug": "carousel-over-skulls",
+      "title": {
+        "ru": "Карусель над Черепами",
+        "en": "Carousel Over Skulls",
+        "de": "Karussell über Schädeln"
+      },
+      "story": {
+        "ru": "Белая лошадка всё ещё скачет, хотя зрители давно стали костями под копытами. Одна нога - штопор карусели: номер вечный, публика конечна. Звёзды на попоне помнят тех, кто купил билет в последний круг.",
+        "en": "The white horse still prances though the audience long ago became bones underfoot. One leg is a carousel pole: the act is eternal, the public is finite. Stars on the saddlecloth remember those who bought a ticket to the last lap.",
+        "de": "Das weiße Pferd tänzelt noch, obwohl das Publikum längst zu Knochen unter den Hufen wurde. Ein Bein ist eine Karussellstange: die Nummer ist ewig, das Publikum endlich. Sterne auf der Schabracke erinnern jene, die ein Ticket zur letzten Runde kauften."
+      },
+      "audience": {
+        "ru": "Ценитель memento mori и creepy-cute цирка. Повесит в тёмной детской эстетике взрослого коллекционера или в готическом кабинете.",
+        "en": "A lover of memento mori and creepy-cute circus. Will hang it in an adult dark-nursery aesthetic or gothic study.",
+        "de": "Liebhaber von Memento mori und Creepy-Cute-Zirkus. Hängt es in dunkler Sammler-Kinderzimmerästhetik oder gotischem Arbeitszimmer."
+      },
+      "vibe": "gothic circus, macabre whimsy, dark nursery",
+      "charPrompt": "A bulbous white carousel horse with a red-and-white spiral pole for one leg and a starry pink saddlecloth, prancing above two pale human skulls on a ledge against black.",
+      "tags": [
+        "circus",
+        "gothic",
+        "horror",
+        "bones"
+      ]
+    },
+    {
+      "id": "44",
+      "slug": "ember-jester-of-the-void",
+      "title": {
+        "ru": "Уголёк Пустоты",
+        "en": "Ember Jester of the Void",
+        "de": "Glutnarr der Leere"
+      },
+      "story": {
+        "ru": "Она сжалась в чёрном, как искра, которую пытаются задуть. Рогатый капюшон и неоновая кромка тела - последнее тепло души, запертой в алом контуре. Жест ладони - то ли мольба, то ли приглашение войти в жар.",
+        "en": "She curled into the black like a spark someone tries to snuff. Horned hood and neon body-edge are the last heat of a soul locked in a crimson outline. The raised palm is either a plea or an invitation into the blaze.",
+        "de": "Sie kroch ins Schwarze wie ein Funke, den man ausblasen will. Gehörnte Kapuze und neonrote Körperkante sind die letzte Hitze einer Seele im Purpurumriss. Die erhobene Handfläche ist Bitte oder Einladung in die Glut."
+      },
+      "audience": {
+        "ru": "Покупатель экспрессивного оккультного арта. Любит тёмные стены, один сильный силуэт и атмосферу ритуала.",
+        "en": "A buyer of expressive occult art. Loves dark walls, one strong silhouette and ritual atmosphere.",
+        "de": "Käufer expressiver okkulter Kunst. Liebt dunkle Wände, eine starke Silhouette und Ritualatmosphäre."
+      },
+      "vibe": "occult study, dark surrealism, ember gallery",
+      "charPrompt": "A curled feminine figure glowing in deep and neon red against black void, with a horned jester-like head, hollow dark eyes and a raised palm gesture.",
+      "tags": [
+        "doll",
+        "surreal"
+      ]
+    },
+    {
+      "id": "45",
+      "slug": "cracked-porcelain-heir",
+      "title": {
+        "ru": "Треснувший Фарфоровый Наследник",
+        "en": "The Cracked Porcelain Heir",
+        "de": "Der Rissige Porzellanerbe"
+      },
+      "story": {
+        "ru": "Его лицо лопнуло по швам века, но взгляд стеклянных глаз остался цельным. Кепка и бант - костюм мальчика из прошлого, которое слишком долго хранили на полке. Трещины - карта побегов, которые он так и не совершил.",
+        "en": "His face split along the seams of a century, yet glass eyes stayed intact. Cap and bow are a boy's costume from a past kept too long on the shelf. The cracks are a map of escapes he never took.",
+        "de": "Sein Gesicht platzte entlang der Nähte eines Jahrhunderts, doch Glasaugen blieben ganz. Mütze und Schleife sind das Kostüm eines Jungen aus einer zu lange aufbewahrten Vergangenheit. Die Risse sind eine Karte von Fluchten, die er nie nahm."
+      },
+      "audience": {
+        "ru": "Коллекционер викторианского макабра и uncanny doll art. Ищет реалистичную графику для готического кабинета или библиотеки.",
+        "en": "A collector of Victorian macabre and uncanny doll art. Seeks realistic graphics for a gothic study or library.",
+        "de": "Sammler viktorianischen Makabers und Uncanny-Doll-Art. Sucht realistische Grafik für gotisches Arbeitszimmer oder Bibliothek."
+      },
+      "vibe": "haunted nursery, Victorian gothic, dark study",
+      "charPrompt": "A Victorian porcelain boy doll with a newsboy cap and large dark bow tie, large glossy eyes and deep cracked fissures across a pale glazed face, uncanny melancholic expression.",
+      "tags": [
+        "doll",
+        "gothic",
+        "horror",
+        "nursery"
+      ]
+    },
+    {
+      "id": "46",
+      "slug": "violet-club-oracle",
+      "title": {
+        "ru": "Фиолетовый Оракул Треф",
+        "en": "Violet Club Oracle",
+        "de": "Violettes Kreuz-Orakel"
+      },
+      "story": {
+        "ru": "Её лысая фиолетовая голова парит как карта, выпавшая из чужой колоды. Оранжевые глаза гипнотизируют без зрачков, а серьга-трефа обещает игру, в которой ставки - чужие тайны. Ухмылка знает финал раньше, чем вы сели за стол.",
+        "en": "Her bald violet head floats like a card fallen from someone else's deck. Orange eyes hypnotize without pupils, and a club earring promises a game where the stakes are other people's secrets. The smirk knows the ending before you sit down.",
+        "de": "Ihr kahler violetter Kopf schwebt wie eine Karte aus fremdem Spiel. Orange Augen hypnotisieren ohne Pupillen, und der Kreuz-Ohrring verspricht ein Spiel, dessen Einsatz fremde Geheimnisse sind. Das Grinsen kennt das Ende, bevor Sie sich setzen."
+      },
+      "audience": {
+        "ru": "Ценитель мистического сюра и карточной символики. Повесит в тёмной гостиной, салоне или галерейном лофте как гипнотический акцент.",
+        "en": "A lover of mystical surrealism and card symbolism. Will hang it in a dark living room, salon or gallery loft as a hypnotic accent.",
+        "de": "Liebhaber mystischen Surrealismus und Kartensymbolik. Hängt es im dunklen Wohnzimmer, Salon oder Galerie-Loft als hypnotischen Akzent."
+      },
+      "vibe": "dark surreal gallery, neo-gothic lounge, macabre study",
+      "charPrompt": "A bald purple-skinned character head with glowing concentric orange-red eyes, arched brows, dark smirk and a dangling club-suit earring, floating against a muted grey-green painted ground.",
+      "tags": [
+        "horror",
+        "surreal",
+        "interior"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+.venv/
+reports/*
+!reports/.gitkeep
+credentials/*
+!credentials/.gitkeep
+!credentials/README.md
+.env
+*.log
+.lighthouseci/

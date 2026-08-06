@@ -1,0 +1,23 @@
+{
+  "name": "sitrifor-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.2",
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/literata": "^5.3.0",
+    "@fontsource/source-serif-4": "^5.3.0",
+    "@vitalets/google-translate-api": "^9.2.0",
+    "better-sqlite3": "^11.8.1",
+    "cheerio": "^1.0.0",
+    "fastify": "^5.2.1",
+    "marked": "^15.0.12",
+    "puppeteer-core": "^23.6.0",
+    "rss-parser": "^3.13.0",
+    "sharp": "^0.33.5"
+  }
+}

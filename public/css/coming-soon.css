@@ -1,0 +1,90 @@
+/* Coming soon placeholder */
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--g-spacing-8) var(--g-spacing-5);
+  margin: var(--g-spacing-4) auto;
+  max-width: 420px;
+  min-height: 280px;
+}
+
+.coming-soon__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 119, 255, 0.08);
+  color: var(--color-accent);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  margin-bottom: var(--g-spacing-4);
+  position: relative;
+}
+
+.coming-soon__icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  opacity: 0.35;
+  animation: comingSoonPulse 2s ease-out infinite;
+}
+
+@keyframes comingSoonPulse {
+  0% { transform: scale(1); opacity: 0.35; }
+  70% { transform: scale(1.15); opacity: 0; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+
+.coming-soon__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--g-spacing-3);
+}
+
+.coming-soon__status {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: var(--g-spacing-2);
+}
+
+.coming-soon__dots::after {
+  content: '';
+  animation: comingSoonDots 1.5s steps(4, end) infinite;
+}
+
+@keyframes comingSoonDots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+.coming-soon__hint {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.service-panel__inner {
+  padding: var(--g-spacing-4) 0 var(--g-spacing-6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coming-soon__icon::after {
+    animation: none;
+    opacity: 0.2;
+  }
+
+  .coming-soon__dots::after {
+    animation: none;
+    content: '...';
+  }
+}

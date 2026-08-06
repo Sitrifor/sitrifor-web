@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Sitrifor birthday tattoo batch daily (03:15 MSK ≈ 00:15 UTC)
+# Prefer editor rotation (1/20min). Keep disabled on prod to avoid LLM bursts.
+
+[Timer]
+OnCalendar=*-*-* 00:15:00
+Persistent=false
+Unit=sitrifor-birthday-daily.service
+RandomizedDelaySec=180
+
+[Install]
+WantedBy=timers.target

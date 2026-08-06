@@ -1,0 +1,110 @@
+[
+  {
+    "key": "inked-mag",
+    "name": "Inked Magazine",
+    "url": "https://www.inkedmag.com",
+    "feedUrl": "https://www.inkedmag.com/feed/",
+    "region": "US",
+    "lang": "en",
+    "tier": "core"
+  },
+  {
+    "key": "tattoo-artist-mag",
+    "name": "Tattoo Artist Magazine",
+    "url": "https://tattooartistmagazine.com",
+    "feedUrl": "https://tattooartistmagazine.com/feed/",
+    "region": "US",
+    "lang": "en",
+    "tier": "core"
+  },
+  {
+    "key": "tattooing-101",
+    "name": "Tattooing 101",
+    "url": "https://www.tattooing101.com",
+    "feedUrl": "https://www.tattooing101.com/feed/",
+    "region": "US",
+    "lang": "en",
+    "tier": "core"
+  },
+  {
+    "key": "alldaytattoo",
+    "name": "All Day Tattoo",
+    "url": "https://www.alldaytattoo.com",
+    "feedUrl": "https://www.alldaytattoo.com/blog/feed/",
+    "region": "US",
+    "lang": "en",
+    "tier": "core"
+  },
+  {
+    "key": "tattoo-seo",
+    "name": "Tattoo SEO",
+    "url": "https://tattooseo.com",
+    "feedUrl": "https://tattooseo.com/blog/feed/",
+    "region": "US",
+    "lang": "en",
+    "tier": "clients"
+  },
+  {
+    "key": "reddit-tattooartists",
+    "name": "r/TattooArtists",
+    "url": "https://www.reddit.com/r/TattooArtists/",
+    "feedUrl": "https://www.reddit.com/r/TattooArtists/.rss",
+    "region": "US",
+    "lang": "en",
+    "tier": "core"
+  },
+  {
+    "key": "reddit-procreate",
+    "name": "r/ProCreate",
+    "url": "https://www.reddit.com/r/ProCreate/",
+    "feedUrl": "https://www.reddit.com/r/ProCreate/.rss",
+    "region": "US",
+    "lang": "en",
+    "tier": "sketch"
+  },
+  {
+    "key": "booksy-biz",
+    "name": "Booksy Business",
+    "url": "https://biz.booksy.com",
+    "feedUrl": "https://biz.booksy.com/blog/feed/",
+    "region": "US",
+    "lang": "en",
+    "tier": "clients"
+  },
+  {
+    "key": "bishop",
+    "name": "Bishop Rotary",
+    "url": "https://bishoprotary.com",
+    "feedUrl": "https://bishoprotary.com/blogs/news.atom",
+    "region": "US",
+    "lang": "en",
+    "tier": "gear"
+  },
+  {
+    "key": "fk-irons",
+    "name": "FK Irons",
+    "url": "https://fkirons.com",
+    "feedUrl": "https://fkirons.com/blogs/news.atom",
+    "region": "US",
+    "lang": "en",
+    "tier": "gear"
+  },
+  {
+    "key": "eternal-ink",
+    "name": "Eternal Ink",
+    "url": "https://eternaltattooink.com",
+    "feedUrl": "https://eternaltattooink.com/blogs/news.atom",
+    "region": "US",
+    "lang": "en",
+    "tier": "pigments"
+  },
+  {
+    "key": "total-tattoo",
+    "name": "Total Tattoo",
+    "url": "https://www.totaltattoo.co.uk",
+    "feedUrl": "https://www.totaltattoo.co.uk/feed/",
+    "region": "EU",
+    "lang": "en",
+    "tier": "core"
+  }
+]

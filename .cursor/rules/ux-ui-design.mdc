@@ -1,0 +1,34 @@
+---
+description: Ключевые UX/UI правила Sitrifor (контраст, медиа, CTA, иерархия)
+alwaysApply: true
+---
+
+# UX/UI Design Rules (Sitrifor)
+
+Полный QA-канон: `seo/docs/DESIGN-QA.md`. После правок гайдов/хабов: `cd seo && npm run guides:qa`. После продуктового копирайта: `cd seo && npm run copy:qa`. Редактура: `EDITORIAL_STYLE_RU` + `editorialSystemPrompt('product')` в `backend/news-text-polish.js`.
+
+## Контраст и кнопки (P0)
+
+- Никогда не оставлять CTA без стилей кнопки. На гайдах стили живут в `public/css/guides.css` (страницы не грузят `yandex-business.css`).
+- На тёмном фоне: brand = жёлтый фон + тёмный текст; ghost = светлый текст + видимая обводка. Запрещён чёрный/тёмный текст на прозрачном фоне.
+- Перед сдачей: `npm run guides:qa` (live contrast ≥ 4.5).
+
+## Типографика (P0)
+
+- Базовый `body` шрифт только в `main.css`: `font-family: var(--g-font-family)` (Inter). Не полагаться на `yandex-business.css` - без него гайды падают в Times.
+- Заголовки могут быть Manrope; header title / lead / copy - тот же sans, что на главной.
+- Gate: `guides:qa` падает, если computed font = Times.
+
+## Медиа и скролл (P0)
+
+- Phone-скрины: hero 160–180px; секции только с `.home-seo__media--phone` (не full-bleed).
+- Квадрат: `--square` ≤ ~280px. Wide: `--wide` с max-height.
+- Один hero + одна карусель `.home-seo__shots`. Section media ≤ 2 на страницу, ≤ 45% vh.
+- Не дублировать один скрин в hero + карусели + секции.
+
+## Журнальная вёрстка гайдов
+
+- Блоки `home-seo`: eyebrow → title → copy.
+- УТП - открытый список с ключами, без тяжёлых плиток.
+- `home-seo__key`: ≤ 2 на секцию.
+- CTA: один primary + опционально один secondary.

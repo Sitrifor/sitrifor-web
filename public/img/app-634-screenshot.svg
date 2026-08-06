@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="560" viewBox="0 0 280 560" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="screen-bg" x1="0" y1="0" x2="280" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a1a2e"/>
+      <stop offset="1" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffcc00"/>
+      <stop offset="1" stop-color="#e6b800"/>
+    </linearGradient>
+  </defs>
+  <!-- Phone frame -->
+  <rect x="8" y="8" width="264" height="544" rx="36" fill="#111" stroke="#333" stroke-width="2"/>
+  <rect x="20" y="24" width="240" height="512" rx="28" fill="url(#screen-bg)"/>
+  <!-- Notch -->
+  <rect x="100" y="32" width="80" height="22" rx="11" fill="#0d0d14"/>
+  <!-- Status bar -->
+  <text x="36" y="52" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="11" opacity="0.7">9:41</text>
+  <!-- App header -->
+  <text x="36" y="88" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">634</text>
+  <rect x="200" y="72" width="44" height="24" rx="12" fill="url(#accent)"/>
+  <text x="212" y="88" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700">PRO</text>
+  <!-- Calendar card -->
+  <rect x="28" y="108" width="224" height="120" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="44" y="132" fill="#ffcc00" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600"> ,</text>
+  <text x="44" y="156" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">!53>4=O: 3 70?8A8</text>
+  <rect x="44" y="168" width="80" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="44" y="184" width="120" height="8" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="220" cy="168" r="18" fill="url(#accent)" opacity="0.9"/>
+  <text x="214" y="173" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">+</text>
+  <!-- Pigment card -->
+  <rect x="28" y="240" width="224" height="140" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="44" y="264" fill="#5282ff" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">  "</text>
+  <text x="44" y="288" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">> D>B> MA:870</text>
+  <!-- Color swatches -->
+  <circle cx="52" cy="318" r="14" fill="#8B4513"/>
+  <circle cx="84" cy="318" r="14" fill="#2F4F4F"/>
+  <circle cx="116" cy="318" r="14" fill="#4A3728"/>
+  <circle cx="148" cy="318" r="14" fill="#1C1C1C"/>
+  <circle cx="180" cy="318" r="14" fill="#8B0000"/>
+  <rect x="44" y="342" width="100" height="24" rx="8" fill="url(#accent)"/>
+  <text x="58" y="358" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700"> 0AAG8B0BL</text>
+  <!-- Clients row -->
+  <rect x="28" y="392" width="224" height="56" rx="12" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="52" cy="420" r="16" fill="rgba(82,130,255,0.4)"/>
+  <text x="76" y="416" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">;85=BA:0O 1070</text>
+  <text x="76" y="432" fill="rgba(255,255,255,0.5)" font-family="Inter, system-ui, sans-serif" font-size="10">128 :;85=B>2</text>
+  <!-- Bottom nav -->
+  <rect x="28" y="468" width="224" height="52" rx="14" fill="rgba(0,0,0,0.35)"/>
+  <circle cx="70" cy="494" r="6" fill="#ffcc00"/>
+  <circle cx="140" cy="494" r="6" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="210" cy="494" r="6" fill="rgba(255,255,255,0.3)"/>
+</svg>

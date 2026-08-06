@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Sitrifor переехал на новый сервер</title>
+  <style>
+    :root { color-scheme: light; --bg:#0f1115; --fg:#f4f4f5; --muted:#a1a1aa; --accent:#e8c547; --line:#2a2a2e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: radial-gradient(1200px 600px at 20% -10%, #1c2330, var(--bg)); color: var(--fg); line-height: 1.55; min-height: 100vh; }
+    main { max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: 1.85rem; margin: 0 0 0.75rem; letter-spacing: -0.02em; }
+    p { color: var(--muted); }
+    .lead { color: var(--fg); font-size: 1.05rem; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem 1.2rem; margin: 1.25rem 0; background: rgba(255,255,255,0.03); }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; color: var(--accent); }
+    ol { color: var(--muted); padding-left: 1.25rem; }
+    li { margin: 0.4rem 0; }
+    a { color: var(--accent); }
+    .brand { color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.75rem; margin: 0 0 0.75rem; font-family: system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="brand">Sitrifor</p>
+    <h1>Вы попали на старый хостинг</h1>
+    <p class="lead">Сайт уже работает на новом сервере (<span class="mono">217.26.24.29</span>). Эта страница открылась из-за устаревшего DNS-кэша (часто Cloudflare 1.1.1.1 или Quad9).</p>
+
+    <div class="card">
+      <p><strong style="color:var(--fg)">Что сделать прямо сейчас</strong></p>
+      <ol>
+        <li>Сбросить кэш 1.1.1.1: <a href="https://one.one.one.one/purge-cache/">one.one.one.one/purge-cache</a> для <span class="mono">sitrifor.ru</span> и <span class="mono">www.sitrifor.ru</span>.</li>
+        <li>Временно поставить DNS Google <span class="mono">8.8.8.8</span> / <span class="mono">8.8.4.4</span> и открыть сайт снова.</li>
+        <li>Подождать до ~10 минут (TTL A-записи 600 с) и обновить страницу без кэша.</li>
+      </ol>
+    </div>
+
+    <p>Редирект на <span class="mono">https://sitrifor.ru</span> отсюда не поможет: при старом DNS он снова приведёт на этот же Beget.</p>
+    <p class="meta" style="margin-top:2rem;font-size:0.9rem;color:var(--muted)">Эталонный IP VPS: 217.26.24.29 · Runbook: seo/reports/dns-apache-404-runbook.md</p>
+  </main>
+</body>
+</html>

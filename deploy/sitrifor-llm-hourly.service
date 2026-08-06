@@ -1,0 +1,26 @@
+[Unit]
+Description=Sitrifor LLM news editor (1 article / 20 min)
+After=network-online.target ollama.service sitrifor-api.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/sitrifor/seo
+Environment=OLLAMA_HOST=http://127.0.0.1:11434
+Environment=OLLAMA_MODEL=qwen2.5:1.5b
+Environment=OLLAMA_NUM_THREAD=1
+Environment=OLLAMA_NUM_CTX=2048
+Environment=NEWS_LLM_DAILY=1
+Environment=NEWS_LLM_REVIEWS=0
+Environment=NEWS_LLM_INSIGHTS=0
+Environment=NEWS_EDITOR_MIN_INTERVAL_MS=1200000
+ExecStart=/usr/bin/flock -n /tmp/sitrifor-llm.lock /var/www/sitrifor/seo/scripts/news-llm-hourly.sh
+Nice=15
+CPUQuota=100%
+MemoryMax=2G
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+TimeoutStartSec=45min
+
+[Install]
+WantedBy=multi-user.target

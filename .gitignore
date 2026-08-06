@@ -1,0 +1,48 @@
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+!**/.env.example
+seo/credentials/*
+!seo/credentials/.gitkeep
+!seo/credentials/README.md
+*.pem
+*.p12
+*.key
+id_rsa
+id_ed25519
+*_token.txt
+*-oauth*.json
+!.env.example
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.Python
+.npm/
+.cache/
+
+# Build / generated / local reports
+seo/reports/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local backups and junk
+public-dark-backup-*/
+**/*.bak
+**/*.bak-*
+**/*backup*/
+masters.html.broken-*
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+*~
+
+# GitHub / Cursor local only (keep rules)
+.cursor/*.log

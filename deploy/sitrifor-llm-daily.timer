@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Sitrifor LLM daily writer at 02:30 Europe/Moscow (23:30 UTC)
+
+[Timer]
+# Server TZ is UTC; 23:30 UTC = 02:30 MSK
+OnCalendar=*-*-* 23:30:00
+Persistent=true
+Unit=sitrifor-llm-daily.service
+
+[Install]
+WantedBy=timers.target
