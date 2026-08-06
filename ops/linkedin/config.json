@@ -1,0 +1,20 @@
+{
+  "profile_url": "https://www.linkedin.com/in/temagrishan",
+  "site": "https://sitrifor.ru",
+  "app_store": "https://apps.apple.com/ru/app/634/id6795944683",
+  "masters": "https://sitrifor.ru/masters",
+  "ollama_host": "http://127.0.0.1:11434",
+  "ollama_model": "qwen2.5:1.5b",
+  "language": "ru",
+  "max_chars": 2800,
+  "hashtags": ["#Sitrifor", "#634app", "#TattooArtist", "#TattooStudio"],
+  "topics": [
+    "эскиз и проект татуировки без хаоса в чатах",
+    "подбор пигмента и склад краски",
+    "чем 634 не является CRM",
+    "неделя мастера с 634",
+    "связка сайта sitrifor.ru и приложения",
+    "ошибки при выборе приложения для тату-мастера",
+    "партнёрства с поставщиками расходников"
+  ]
+}
