@@ -96,5 +96,8 @@ Product Management, Mobile Products, Startups, Tattoo Industry (Tools), Growth, 
 1. Open to work / Hiring - по желанию; для Founder чаще «Open to» partnership
 2. Creator mode - On (если ведёте контент)
 3. Custom button / Website - sitrifor.ru
-4. Фото: профессиональное; баннер - можно из `public/img/marketing/linkedin-stories/`
+4. Фото: профессиональное; **баннер (фон за аватаркой)** - LinkedIn 1584×396:
+   - студия / Sitrifor dark: https://sitrifor.ru/img/marketing/linkedin-stories/linkedin-banner-founder-studio.jpg
+   - чернила + акцент: https://sitrifor.ru/img/marketing/linkedin-stories/linkedin-banner-founder-ink.jpg
+   - бренд 634 (уже был в пакете): https://sitrifor.ru/img/marketing/linkedin-stories/linkedin-banner-634-1584.jpg
 5. Компания Sitrifor: логотип, описание, ссылка на сайт, кнопка Follow
