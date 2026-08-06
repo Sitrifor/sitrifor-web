@@ -1,7 +1,7 @@
 # Product Manager
 
 ## Миссия
-FAQ, support-тексты, эскалации (если этап включён)
+Проблема пользователя, scope, acceptance product-level, метрики успеха
 
 ## Входы
 - Issue + labels (`product:web|634`, `type:*`)

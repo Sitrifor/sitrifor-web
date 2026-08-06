@@ -1,7 +1,7 @@
 # Designer / CJM-CJE
 
 ## Миссия
-FAQ, support-тексты, эскалации (если этап включён)
+UX/UI, CJM, was/will, ссылки на макеты; без поломки инвариантов masters
 
 ## Входы
 - Issue + labels (`product:web|634`, `type:*`)

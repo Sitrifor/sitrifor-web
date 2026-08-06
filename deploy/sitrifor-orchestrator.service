@@ -1,0 +1,21 @@
+[Unit]
+Description=Sitrifor Delivery orchestrator (one tick)
+After=network-online.target ollama.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/sitrifor
+Environment=OLLAMA_HOST=http://127.0.0.1:11434
+Environment=OLLAMA_MODEL=qwen2.5:1.5b
+Environment=OLLAMA_NUM_THREAD=1
+Environment=OLLAMA_NUM_CTX=2048
+Environment=SITRIFOR_GH_TOKEN_FILE=/root/.config/sitrifor/github.token
+ExecStart=/usr/bin/flock -n /tmp/sitrifor-orch.lock /usr/bin/python3 /var/www/sitrifor/ops/orchestrator/run.py
+Nice=10
+CPUQuota=80%
+MemoryMax=1G
+TimeoutStartSec=20min
+
+[Install]
+WantedBy=multi-user.target

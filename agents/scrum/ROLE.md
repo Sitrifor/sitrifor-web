@@ -1,7 +1,7 @@
 # Scrum Master
 
 ## Миссия
-FAQ, support-тексты, эскалации (если этап включён)
+Сводка пайплайна, полнота AC, пакет Ready for You
 
 ## Входы
 - Issue + labels (`product:web|634`, `type:*`)

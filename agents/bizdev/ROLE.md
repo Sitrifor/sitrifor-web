@@ -1,7 +1,7 @@
 # BizDev
 
 ## Миссия
-FAQ, support-тексты, эскалации (если этап включён)
+Оценка влияния на выручку/аудиторию; score draft; go/no-go по рынку
 
 ## Входы
 - Issue + labels (`product:web|634`, `type:*`)

@@ -1,0 +1,32 @@
+{
+  "project_owner": "Sitrifor",
+  "project_number": 1,
+  "repo_owner": "Sitrifor",
+  "repo_name": "sitrifor-web",
+  "ollama_host": "http://127.0.0.1:11434",
+  "ollama_model": "qwen2.5:1.5b",
+  "status_field_name": "Status",
+  "product_labels": ["product:web", "product:634"],
+  "stages": [
+    {"status": "0 Inbox", "role": null, "action": "pickup"},
+    {"status": "1 BizDev", "role": "bizdev", "action": "run"},
+    {"status": "2 Strategist", "role": "strategist", "action": "run"},
+    {"status": "3 Product", "role": "product", "action": "run", "approve_after": true},
+    {"status": "4 Project", "role": "project", "action": "run"},
+    {"status": "5 Design CJM", "role": "design", "action": "run"},
+    {"status": "6 SysAnalyst", "role": "sysanalyst", "action": "run"},
+    {"status": "7 Architect", "role": "architect", "action": "run", "approve_after": true},
+    {"status": "8 Dev", "role": "dev", "action": "plan_only"},
+    {"status": "9 DevOps", "role": "devops", "action": "run"},
+    {"status": "10 IB Legal", "role": "ib_legal", "action": "run"},
+    {"status": "11 QA", "role": "qa", "action": "run"},
+    {"status": "12 Marketing", "role": "marketing", "action": "run"},
+    {"status": "13 SMM Editor", "role": "smm", "action": "run"},
+    {"status": "14 AI Data", "role": "ai_data", "action": "run"},
+    {"status": "15 Support", "role": "support", "action": "run"},
+    {"status": "16 Scrum gate", "role": "scrum", "action": "run", "approve_after": true},
+    {"status": "17 Ready for You", "role": null, "action": "human"}
+  ],
+  "approve_command": "/approve",
+  "max_items_per_run": 2
+}

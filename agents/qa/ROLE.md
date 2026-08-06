@@ -1,7 +1,7 @@
 # QA
 
 ## Миссия
-FAQ, support-тексты, эскалации (если этап включён)
+Проверка всех AC этапов; copy:qa / structural gates; регресс
 
 ## Входы
 - Issue + labels (`product:web|634`, `type:*`)
