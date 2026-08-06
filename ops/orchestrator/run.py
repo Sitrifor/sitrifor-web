@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
-Sitrifor Delivery orchestrator (minimal).
+Sitrifor Delivery orchestrator.
 
-Polls GitHub Project «Sitrifor Delivery», runs role agents via local Ollama,
-posts Issue comments, advances Status. Stops at approve gates until the
-issue gets a comment containing `/approve`.
+Polls GitHub Project «Sitrifor Delivery» and advances the pipeline.
+Critical roles (Architect, Design, DevOps, QA, Dev, …) are NOT run on Ollama.
+Default runner is Cursor/human: orchestrator posts a role brief and waits for
+`/done` (role finished) and `/approve` (customer gate where configured).
+
+Optional Ollama drafts only if config.ollama.enabled and role allowlisted
+(disabled by default).
 
 Token: /root/.config/sitrifor/github.token (Classic PAT, repo+project).
 """
@@ -12,9 +16,7 @@ from __future__ import annotations
 
 import json
 import os
-import re
 import sys
-import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -24,7 +26,9 @@ ROOT = Path(__file__).resolve().parents[2]
 CFG_PATH = Path(__file__).with_name("config.json")
 TOKEN_PATH = Path(os.environ.get("SITRIFOR_GH_TOKEN_FILE", "/root/.config/sitrifor/github.token"))
 STATE_MARKER = "<!-- orch:stage:{role}:done -->"
-AWAIT_MARKER = "<!-- orch:awaiting-approve:{status} -->"
+AWAIT_APPROVE = "<!-- orch:awaiting-approve:{status} -->"
+AWAIT_DONE = "<!-- orch:awaiting-done:{role} -->"
+DISPATCHED = "<!-- orch:dispatched:{role} -->"
 
 
 def load_cfg() -> dict:
@@ -85,8 +89,9 @@ def rest(tok: str, method: str, path: str, payload: dict | None = None):
 
 
 def ollama_chat(cfg: dict, system: str, user: str) -> str:
-    host = cfg["ollama_host"].rstrip("/")
-    model = cfg.get("ollama_model") or "qwen2.5:1.5b"
+    oc = cfg.get("ollama") or {}
+    host = (oc.get("host") or cfg.get("ollama_host") or "http://127.0.0.1:11434").rstrip("/")
+    model = oc.get("model") or cfg.get("ollama_model") or "qwen2.5:1.5b"
     payload = {
         "model": model,
         "stream": False,
@@ -111,10 +116,7 @@ def ollama_chat(cfg: dict, system: str, user: str) -> str:
         with urllib.request.urlopen(req, timeout=180) as resp:
             data = json.load(resp)
     except Exception as e:
-        return (
-            f"(Ollama недоступен: {e}. Ниже каркас этапа без LLM.)\n\n"
-            f"## Черновик\nНужна ручная оценка роли. Модель: {model}."
-        )
+        return f"(Ollama недоступен: {e})"
     return (data.get("message") or {}).get("content") or "(пустой ответ модели)"
 
 
@@ -227,21 +229,49 @@ def stage_done(issue: dict, role: str) -> bool:
 
 
 def awaiting_approve(issue: dict, status: str) -> bool:
-    return AWAIT_MARKER.format(status=status) in comments_text(issue)
+    return AWAIT_APPROVE.format(status=status) in comments_text(issue)
 
 
-def has_approve(issue: dict, cfg: dict) -> bool:
-    cmd = cfg.get("approve_command") or "/approve"
-    # approve after the last await marker
+def awaiting_done(issue: dict, role: str) -> bool:
+    return AWAIT_DONE.format(role=role) in comments_text(issue)
+
+
+def dispatched(issue: dict, role: str) -> bool:
+    return DISPATCHED.format(role=role) in comments_text(issue)
+
+
+def _cmd_after_marker(issue: dict, marker: str, cmd: str) -> bool:
     bodies = [c.get("body") or "" for c in (issue.get("comments") or {}).get("nodes") or []]
-    last_await = -1
+    last = -1
     for i, b in enumerate(bodies):
-        if "<!-- orch:awaiting-approve:" in b:
-            last_await = i
-    for b in bodies[last_await + 1 :]:
-        if cmd in b and "orch:awaiting-approve" not in b:
+        if marker in b:
+            last = i
+    if last < 0:
+        return False
+    for b in bodies[last + 1 :]:
+        if cmd in b and marker.split(":")[1] not in b:
+            # simple: command present and not in an orch template line
+            if b.strip().startswith("Оркестратор:"):
+                continue
             return True
     return False
+
+
+def has_approve(issue: dict, cfg: dict, status: str) -> bool:
+    cmd = cfg.get("approve_command") or "/approve"
+    return _cmd_after_marker(issue, AWAIT_APPROVE.format(status=status), cmd)
+
+
+def has_done(issue: dict, cfg: dict, role: str) -> bool:
+    cmd = cfg.get("done_command") or "/done"
+    return _cmd_after_marker(issue, AWAIT_DONE.format(role=role), cmd)
+
+
+def has_skip(issue: dict, cfg: dict, role: str) -> bool:
+    cmd = cfg.get("skip_command") or "/skip"
+    return _cmd_after_marker(issue, AWAIT_DONE.format(role=role), cmd) or _cmd_after_marker(
+        issue, DISPATCHED.format(role=role), cmd
+    )
 
 
 def set_status(tok: str, project_id: str, item_id: str, field_id: str, option_id: str):
@@ -307,7 +337,35 @@ def write_artifact(number: int, name: str, content: str):
     p.write_text((prev + block).lstrip() + "\n", encoding="utf-8")
 
 
-def build_prompt(role: str, issue: dict, action: str) -> tuple[str, str]:
+def build_dispatch_brief(role: str, issue: dict) -> str:
+    role_md = read_text(f"agents/{role}/ROLE.md", 4000)
+    rules = read_text(f"agents/{role}/RULES.md", 2500)
+    labels = ", ".join(n["name"] for n in (issue.get("labels") or {}).get("nodes") or [])
+    return (
+        f"### Роль `{role}` - нужен Cursor / сильный агент / человек\n\n"
+        f"Оркестратор **не** гоняет эту роль на Ollama. Откройте Issue в Cursor "
+        f"(cloud или local), выполните роль по брифу ниже, приложите артефакты в "
+        f"`docs/tasks/ISSUE-{issue['number']}/`, затем в комментарии Issue напишите:\n\n"
+        f"- `/done` - этап выполнен, можно дальше\n"
+        f"- `/skip` - этап не нужен (с обоснованием в том же комментарии)\n\n"
+        f"#### Issue\n"
+        f"**#{issue['number']}**: {issue['title']}\n"
+        f"Labels: {labels}\n"
+        f"URL: {issue.get('url')}\n\n"
+        f"#### Brief\n{(issue.get('body') or '')[:2500]}\n\n"
+        f"#### ROLE.md\n{role_md}\n\n"
+        f"#### RULES.md\n{rules}\n\n"
+        f"#### KB\n"
+        f"- `docs/kb/sitrifor-web.md`\n"
+        f"- `docs/kb/app-634.md`\n"
+        f"- `docs/kb/metrics.md`\n"
+        f"- `docs/kb/pipeline.md`\n\n"
+        f"{DISPATCHED.format(role=role)}\n"
+        f"{AWAIT_DONE.format(role=role)}\n"
+    )
+
+
+def build_prompt(role: str, issue: dict) -> tuple[str, str]:
     role_md = read_text(f"agents/{role}/ROLE.md")
     rules = read_text(f"agents/{role}/RULES.md", 3000)
     kb = "\n\n".join(
@@ -324,8 +382,6 @@ def build_prompt(role: str, issue: dict, action: str) -> tuple[str, str]:
         "Только короткий дефис '-', без длинных тире. Не выдумывай секреты и доступы. "
         "Верни markdown: вывод этапа, критерии приёмки этапа, риски, next step."
     )
-    if action == "plan_only":
-        system += " Код не пиши - только план реализации для Cursor/разработчика."
     user = (
         f"# Роль\n{role_md}\n\n# Правила\n{rules}\n\n# KB\n{kb}\n\n"
         f"# Issue #{issue['number']}: {issue['title']}\n"
@@ -345,7 +401,7 @@ def format_agent_comment(role: str, status: str, text: str, extra: str = "") -> 
 
 
 def pickup_inbox(tok: str, cfg: dict, project: dict, field_id: str, opt: dict, item: dict, issue: dict) -> bool:
-    """Move Inbox -> BizDev so the BizDev agent can run on next tick or same run."""
+    """Move Inbox -> BizDev."""
     nxt = "1 BizDev"
     if nxt not in opt:
         return False
@@ -354,10 +410,48 @@ def pickup_inbox(tok: str, cfg: dict, project: dict, field_id: str, opt: dict, i
         tok,
         cfg,
         issue["number"],
-        "Оркестратор: задача принята из **0 Inbox**, передана роли **BizDev**.\n\n"
+        "Оркестратор: задача принята из **0 Inbox**, передана роли **BizDev** "
+        "(Cursor/человек, не Ollama).\n\n"
         "<!-- orch:picked-up -->\n",
     )
     print(f"#{issue['number']}: Inbox -> BizDev")
+    return True
+
+
+def advance(tok, cfg, project, field_id, opt, item, issue, status: str) -> bool:
+    nxt = next_status(cfg, status)
+    if not nxt or nxt not in opt:
+        return False
+    set_status(tok, project["id"], item["id"], field_id, opt[nxt])
+    print(f"#{issue['number']}: {status} -> {nxt}")
+    return True
+
+
+def mark_role_done_and_maybe_wait_approve(
+    tok, cfg, project, field_id, opt, item, issue, stage, note: str
+) -> bool:
+    role = stage["role"]
+    status = stage["status"]
+    extra = ""
+    if stage.get("approve_after"):
+        extra = (
+            f"\n---\n**Апрув заказчика:** комментарий "
+            f"`{cfg.get('approve_command', '/approve')}`\n\n"
+            f"{AWAIT_APPROVE.format(status=status)}\n"
+        )
+    comment_issue(
+        tok,
+        cfg,
+        issue["number"],
+        f"Оркестратор: этап `{role}` закрыт ({note}).\n\n"
+        f"{extra}"
+        f"{STATE_MARKER.format(role=role)}\n",
+    )
+    write_artifact(issue["number"], "pipeline.md", f"status: {status}\nrole: {role}\nnote: {note}\n")
+    if stage.get("approve_after"):
+        print(f"#{issue['number']}: {role} done, awaiting /approve")
+        return True
+    advance(tok, cfg, project, field_id, opt, item, issue, status)
     return True
 
 
@@ -373,65 +467,70 @@ def run_role(
 ) -> bool:
     role = stage["role"]
     status = stage["status"]
-    action = stage.get("action") or "run"
     if not role:
         return False
+
+    runner = stage.get("runner") or "cursor"
+    oc = cfg.get("ollama") or {}
+    ollama_ok = bool(oc.get("enabled")) and role in (oc.get("allowed_roles") or [])
+    if runner == "ollama" and not ollama_ok:
+        runner = "cursor"
+
+    # Already done + approve gate
     if stage_done(issue, role):
-        # already done - advance if not waiting
-        if stage.get("approve_after") and awaiting_approve(issue, status) and not has_approve(issue, cfg):
+        if stage.get("approve_after") and not has_approve(issue, cfg, status):
             print(f"#{issue['number']}: waiting /approve at {status}")
             return False
-        nxt = next_status(cfg, status)
-        if nxt and nxt in opt:
-            if stage.get("approve_after") and not has_approve(issue, cfg):
-                return False
-            set_status(tok, project["id"], item["id"], field_id, opt[nxt])
-            print(f"#{issue['number']}: advance {status} -> {nxt} (already done)")
+        return advance(tok, cfg, project, field_id, opt, item, issue, status)
+
+    # Cursor/human dispatch path
+    if runner == "cursor":
+        if not dispatched(issue, role):
+            brief = build_dispatch_brief(role, issue)
+            comment_issue(tok, cfg, issue["number"], brief)
+            write_artifact(issue["number"], "brief.md", issue.get("body") or issue["title"])
+            write_artifact(issue["number"], f"{role}-dispatch.md", brief)
+            print(f"#{issue['number']}: dispatched {role} to Cursor/human")
             return True
+
+        if has_skip(issue, cfg, role):
+            return mark_role_done_and_maybe_wait_approve(
+                tok, cfg, project, field_id, opt, item, issue, stage, "skip"
+            )
+        if has_done(issue, cfg, role):
+            return mark_role_done_and_maybe_wait_approve(
+                tok, cfg, project, field_id, opt, item, issue, stage, "/done"
+            )
+
+        print(f"#{issue['number']}: waiting /done for {role}")
         return False
 
-    if action == "human":
-        return False
-
-    system, user = build_prompt(role, issue, action)
-    print(f"#{issue['number']}: running {role} via Ollama…")
-    answer = ollama_chat(cfg, system, user)
-
-    # artifacts
-    write_artifact(issue["number"], "brief.md", issue.get("body") or issue["title"])
-    write_artifact(issue["number"], f"{role}.md", answer)
-    if role in ("bizdev", "strategist", "product"):
-        write_artifact(issue["number"], "score.md", answer)
-    write_artifact(
-        issue["number"],
-        "acceptance.md",
-        f"### {role}\n\n(из ответа агента - проверить критерии в комментарии Issue)\n",
-    )
-    write_artifact(
-        issue["number"],
-        "pipeline.md",
-        f"status: {status}\nrole: {role}\naction: {action}\n",
-    )
-
-    extra = ""
-    if stage.get("approve_after"):
-        extra = (
-            f"\n---\n**Нужен апрув заказчика:** напишите в Issue комментарий "
-            f"`{cfg.get('approve_command', '/approve')}` чтобы сдвинуть дальше.\n\n"
-            f"{AWAIT_MARKER.format(status=status)}\n"
+    # Optional Ollama path (allowlisted only)
+    if runner == "ollama" and ollama_ok:
+        system, user = build_prompt(role, issue)
+        print(f"#{issue['number']}: running {role} via Ollama (allowlisted draft)…")
+        answer = ollama_chat(cfg, system, user)
+        write_artifact(issue["number"], f"{role}.md", answer)
+        extra = ""
+        if stage.get("approve_after"):
+            extra = (
+                f"\n---\n**Апрув:** `{cfg.get('approve_command', '/approve')}`\n\n"
+                f"{AWAIT_APPROVE.format(status=status)}\n"
+            )
+        comment_issue(
+            tok,
+            cfg,
+            issue["number"],
+            format_agent_comment(role, status, answer, extra)
+            + "\n_(черновик Ollama - перепроверьте критичные роли вручную)_\n",
         )
-
-    comment_issue(tok, cfg, issue["number"], format_agent_comment(role, status, answer, extra))
-
-    if stage.get("approve_after"):
-        print(f"#{issue['number']}: {role} done, awaiting /approve")
+        if stage.get("approve_after"):
+            return True
+        advance(tok, cfg, project, field_id, opt, item, issue, status)
         return True
 
-    nxt = next_status(cfg, status)
-    if nxt and nxt in opt:
-        set_status(tok, project["id"], item["id"], field_id, opt[nxt])
-        print(f"#{issue['number']}: {role} done, {status} -> {nxt}")
-    return True
+    print(f"#{issue['number']}: unknown runner {runner}")
+    return False
 
 
 def sync_open_issues(tok: str, cfg: dict, project_id: str, opt: dict, field_id: str, existing_numbers: set[int]):
@@ -453,7 +552,6 @@ def sync_open_issues(tok: str, cfg: dict, project_id: str, opt: dict, field_id: 
         n = issue["number"]
         if n in existing_numbers:
             continue
-        # get node id
         q = gql(
             tok,
             "query($o:String!,$r:String!,$n:Int!){ repository(owner:$o,name:$r){ issue(number:$n){ id } } }",
@@ -490,14 +588,11 @@ def process_once() -> int:
 
     sync_open_issues(tok, cfg, project["id"], opt, field_id, existing)
 
-    # reload after sync
     project = load_project(tok, cfg)
     field_id, opt = status_maps(project, cfg)
 
     handled = 0
     max_n = int(cfg.get("max_items_per_run") or 2)
-
-    # Prefer Inbox pickup, then role columns in order
     ordered_statuses = [s["status"] for s in cfg["stages"]]
 
     for status_name in ordered_statuses:
@@ -521,20 +616,22 @@ def process_once() -> int:
                     handled += 1
                 continue
 
-            # If awaiting approve and got it - advance without re-run
-            if stage.get("approve_after") and stage_done(issue, stage["role"] or ""):
-                if has_approve(issue, cfg):
-                    nxt = next_status(cfg, status_name)
-                    if nxt and nxt in opt:
-                        set_status(tok, project["id"], item["id"], field_id, opt[nxt])
+            if stage.get("action") == "human":
+                continue
+
+            role = stage.get("role") or ""
+
+            # Approve gate after role already marked done
+            if role and stage_done(issue, role) and stage.get("approve_after"):
+                if has_approve(issue, cfg, status_name):
+                    if advance(tok, cfg, project, field_id, opt, item, issue, status_name):
                         comment_issue(
                             tok,
                             cfg,
                             issue["number"],
                             f"Оркестратор: получен `{cfg.get('approve_command')}`, "
-                            f"сдвиг **{status_name}** → **{nxt}**.\n\n<!-- orch:approved -->\n",
+                            f"сдвиг с **{status_name}**.\n\n<!-- orch:approved -->\n",
                         )
-                        print(f"#{issue['number']}: approved -> {nxt}")
                         handled += 1
                 else:
                     print(f"#{issue['number']}: still awaiting /approve")

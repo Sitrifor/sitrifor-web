@@ -1,31 +1,33 @@
-# Orchestrator (минимальный)
+# Orchestrator
 
-## Что делает
-Каждые ~3 минуты (`sitrifor-orchestrator.timer`):
+## Принцип
+Оркестратор = **диспетчер колонок**, не «мозг» критичных ролей.
 
-1. Находит open Issues с label `product:web` или `product:634`
-2. Добавляет их на доску [Sitrifor Delivery](https://github.com/users/Sitrifor/projects/1) в **0 Inbox** (если ещё нет)
-3. Inbox → **1 BizDev** → запускает агента роли через **локальный Ollama** (`qwen2.5:1.5b`)
-4. Пишет комментарий в Issue + файлы в `docs/tasks/ISSUE-N/`
-5. Двигает Status дальше по пайплайну
+| Роли | Кто исполняет |
+|------|----------------|
+| Architect, Design, DevOps, QA, Dev, SysAnalyst, Product, IB/Legal, … | **Cursor** (cloud/local) или человек |
+| Ollama `qwen2.5:1.5b` | **выключен** по умолчанию (только опциональный allowlist в config) |
 
-## Апрув человеком
-После этапов **Product**, **Architect**, **Scrum gate** оркестратор ждёт комментарий в Issue:
+Маленькая локальная модель не проектирует архитектуру, не делает DevOps и не закрывает QA.
 
-```text
-/approve
-```
+## Цикл
+1. Issue с `product:web` / `product:634` → доска → **0 Inbox**
+2. Inbox → следующая роль
+3. В Issue появляется бриф роли (ROLE.md + KB) для Cursor
+4. Вы (или Cursor-агент) делаете работу → комментарий **`/done`** (или **`/skip`**)
+5. На гейтах Product / Design / Architect / Dev / DevOps / IB / QA / Scrum - ещё **`/approve`**
+6. Карточка едет дальше
 
-Без этого карточка не едет дальше. **Dev** - только план (код пишет Cursor/человек).
+## Команды в Issue
+- `/done` - роль завершила этап
+- `/skip` - этап не нужен
+- `/approve` - апрув заказчика на гейте
 
-## Запуск вручную
+## Запуск
 ```bash
 python3 /var/www/sitrifor/ops/orchestrator/run.py
+# timer: sitrifor-orchestrator.timer (каждые 3 мин)
 ```
 
-## Требования
-- Classic PAT в `/root/.config/sitrifor/github.token` (`repo` + `project`)
-- Ollama на `127.0.0.1:11434`
-
-## Важно
-Это **не** Cursor Cloud Agent. Анализ ролей делает локальная маленькая модель. Для кода на этапе Dev работайте в Cursor по плану из комментария.
+## Cursor API (следующий шаг)
+Когда будет `CURSOR_API_KEY`, можно подключить автозапуск Cursor Agent на `runner: cursor` вместо ручного `/done`. До ключа - бриф в Issue + ручной/чат Cursor.
