@@ -13,6 +13,7 @@ id_rsa
 id_ed25519
 *_token.txt
 *-oauth*.json
+.analytics-token
 !.env.example
 
 # Dependencies
@@ -46,3 +47,23 @@ masters.html.broken-*
 
 # GitHub / Cursor local only (keep rules)
 .cursor/*.log
+
+# Runtime SQLite and writer state (keep local, do not publish)
+backend/data/*.db
+backend/data/*.db-*
+backend/data/*-writer-state.json
+
+# RusLawOD corpus (multi-GB) and derived DB
+backend/data/ruslawod/download/
+backend/data/ruslawod/extract/
+backend/data/ruslawod/*.db
+backend/data/ruslawod/*.db-*
+
+# Lawyer frontend deps (built assets live in public/lawyer)
+lawyer-app/node_modules/
+lawyer-app/dist/
+lawyer-app/*.tsbuildinfo
+.venv-scrape/
+
+# Scraped / local SEO datasets
+seo/data/

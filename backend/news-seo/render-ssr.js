@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { absoluteImageUrl, normalizeDashes } from './fields.js';
+import { absoluteImageUrl, normalizeDashes, shouldNoindexNews } from './fields.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.resolve(__dirname, '../../public');
@@ -305,7 +305,9 @@ function headTags(article) {
   const desc = normalizeDashes(seo.description || article.summary || title).slice(0, 160);
   const canonical = seo.canonical || `${SITE}/news/a/${article.slug}`;
   const ogImage = absoluteImageUrl(seo.ogImage || article.imageUrl);
-  const robots = seo.robots || 'index, follow';
+  const robots = shouldNoindexNews(article)
+    ? 'noindex, follow'
+    : seo.robots || 'index, follow';
   const jsonLd = seo.jsonLd || {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',

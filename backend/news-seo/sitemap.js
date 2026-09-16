@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { listPublishedForSitemap, newsStats } from '../news.js';
+import { shouldNoindexNews } from './fields.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.resolve(__dirname, '../../public');
@@ -21,7 +22,7 @@ function escXml(s) {
 
 export function writeNewsSitemap({ limit = 5000 } = {}) {
   const today = new Date().toISOString().slice(0, 10);
-  const articles = listPublishedForSitemap({ limit });
+  const articles = listPublishedForSitemap({ limit }).filter((a) => !shouldNoindexNews(a));
   const urls = [
     { loc: `${SITE}/news`, lastmod: today, priority: '0.85', changefreq: 'hourly' },
     ...articles.map((a) => ({

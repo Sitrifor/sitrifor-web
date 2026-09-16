@@ -12,7 +12,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const HUBS_DIR = path.join(ROOT, 'seo/content/hubs');
 const PUBLIC = path.join(ROOT, 'public');
 const SITE = 'https://sitrifor.ru';
-const ASSET_V = { guidesCss: '6', landing: 'menu15', i18nDict: '36', i18n: '4', seoContent: '12' };
+const ASSET_V = { guidesCss: '7', landing: 'menu15', i18nDict: '36', i18n: '4', seoContent: '13', tokens: 'fonts2' };
 
 const argv = process.argv.slice(2);
 const sitemapOnly = argv.includes('--sitemap-only');
@@ -213,12 +213,14 @@ function renderShots(hub) {
   const shots = hub.shots || [];
   if (!shots.length) return '';
   const figs = shots
-    .map(
-      (s) => `<figure class="home-seo__shot">
-        <img src="${escAttr(s.src)}" alt="${escAttr(s.alt || '')}" width="${s.width || 473}" height="${s.height || 1024}" loading="lazy">
+    .map((s) => {
+      const kind = shotKind(s) || 'square';
+      const dims = shotDims(s, kind);
+      return `<figure class="home-seo__shot home-seo__shot--${kind}">
+        <img src="${escAttr(s.src)}" alt="${escAttr(s.alt || '')}" width="${dims.width}" height="${dims.height}" loading="lazy">
         ${s.caption ? `<figcaption>${esc(normalizeDashes(s.caption))}</figcaption>` : ''}
-      </figure>`
-    )
+      </figure>`;
+    })
     .join('\n');
   return renderSeoBlock({
     eyebrow: hub.shotsEyebrow || 'Интерфейс',
@@ -243,14 +245,8 @@ function renderHub(hub) {
     )
     .join('\n');
 
-  const faq =
-    hub.faq?.length
-      ? renderSeoBlock({
-          id: 'faq',
-          eyebrow: 'FAQ',
-          title: 'Частые вопросы',
-          html: `<div class="faq-list guide-faq">
-        ${hub.faq
+  const faqHtml = (items, extraClass = '') => `<div class="faq-list guide-faq${extraClass}">
+        ${items
           .map(
             (f) => `<details class="faq-item">
           <summary class="faq-item__question">${esc(normalizeDashes(f.q))}</summary>
@@ -258,7 +254,26 @@ function renderHub(hub) {
         </details>`
           )
           .join('\n')}
-      </div>`
+      </div>`;
+
+  const faqPreviewCount = Number(hub.faqPreviewCount || 0);
+  const faqPreview =
+    hub.faq?.length && faqPreviewCount > 0
+      ? renderSeoBlock({
+          id: 'faq-preview',
+          eyebrow: 'Коротко',
+          title: 'Ответы на частые запросы',
+          html: `${faqHtml(hub.faq.slice(0, faqPreviewCount), ' guide-faq--preview')}<p class="guide-faq__more"><a href="#faq">Все вопросы</a></p>`
+        })
+      : '';
+
+  const faq =
+    hub.faq?.length
+      ? renderSeoBlock({
+          id: 'faq',
+          eyebrow: 'FAQ',
+          title: 'Частые вопросы',
+          html: faqHtml(hub.faq)
         })
       : '';
 
@@ -333,12 +348,13 @@ function renderHub(hub) {
   <meta name="twitter:title" content="${escAttr(hub.title)}">
   <meta name="twitter:description" content="${escAttr(hub.description)}">
   <meta name="twitter:image" content="${escAttr(hub.ogImage || `${SITE}/img/marketing/app-card-bg.jpg`)}">
-  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/tokens.css?v=${ASSET_V.tokens}">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/landing.css?v=${ASSET_V.landing}">
-  <link rel="stylesheet" href="/css/atmosphere.css">
+  <link rel="stylesheet" href="/css/atmosphere.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/seo-content.css?v=${ASSET_V.seoContent}">
   <link rel="stylesheet" href="/css/guides.css?v=${ASSET_V.guidesCss}">
+  <noscript><link rel="stylesheet" href="/css/atmosphere.css"></noscript>
   <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
 </head>
 <body class="page guide-page" data-page="guides" data-guide="${escAttr(hub.slug)}">
@@ -364,6 +380,7 @@ function renderHub(hub) {
       </header>
     </div>
     ${renderUtp(hub)}
+    ${faqPreview}
     ${renderShots(hub)}
     ${sections}
     ${faq}
@@ -438,8 +455,10 @@ ${urls
 
 function ensureRobots() {
   const robotsPath = path.join(PUBLIC, 'robots.txt');
-  let robots = fs.existsSync(robotsPath) ? fs.readFileSync(robotsPath, 'utf8') : '';
-  const lines = [
+  // Marketplace sitemap file stays live, but we pause advertising it in robots
+  // so Google focuses crawl on hubs/news while the domain is young.
+  // Re-enable by adding: Sitemap: ${SITE}/sitemap-marketplace.xml
+  const desired = [
     'User-agent: *',
     'Allow: /',
     'Disallow: /api/',
@@ -447,19 +466,19 @@ function ensureRobots() {
     'Host: sitrifor.ru',
     `Sitemap: ${SITE}/sitemap.xml`,
     `Sitemap: ${SITE}/sitemap-news.xml`,
+    '# Sitemap marketplace paused for crawl focus (file still at /sitemap-marketplace.xml)',
+    '',
+    '# Locale copies of news: RU canonical without ?lang=',
+    'Disallow: /*?lang=en',
+    'Disallow: /*?lang=de',
+    '',
+    '# AI / LLM context: https://sitrifor.ru/llms.txt',
     ''
-  ];
-  // Keep clean canonical robots
-  if (!robots.includes('Disallow: /api/') || !robots.includes('sitemap-news.xml')) {
-    fs.writeFileSync(robotsPath, lines.join('\n'));
-    return true;
-  }
-  // Normalize Host + sitemaps order if messy
-  if (!/^Host:/m.test(robots) || (robots.match(/^Sitemap:/gm) || []).length < 2) {
-    fs.writeFileSync(robotsPath, lines.join('\n'));
-    return true;
-  }
-  return false;
+  ].join('\n');
+  const current = fs.existsSync(robotsPath) ? fs.readFileSync(robotsPath, 'utf8') : '';
+  if (current.trim() === desired.trim()) return false;
+  fs.writeFileSync(robotsPath, desired);
+  return true;
 }
 
 function main() {

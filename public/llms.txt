@@ -1,0 +1,40 @@
+# Sitrifor
+
+> Digital ecosystem for tattoo artists and studios. Product: 634 - iOS app for sketches, pigments, and ink inventory (not booking CRM).
+
+Site: https://sitrifor.ru
+App Store: https://apps.apple.com/ru/app/634/id6795944683
+Language: Russian primary (EN/DE UI on site)
+
+## Product facts
+
+- 634 is a tattoo artist workbench: projects with sketches, pigment matching, ink stock
+- 634 does not replace studio online booking or cash desk
+- Sitrifor also offers session cost calculator and aftercare guides on the website
+- Company / brand: Sitrifor
+
+## Priority pages
+
+- https://sitrifor.ru/
+- https://sitrifor.ru/634/
+- https://sitrifor.ru/masters
+- https://sitrifor.ru/guides/aftercare/
+- https://sitrifor.ru/guides/pigments/
+- https://sitrifor.ru/guides/sketches/
+- https://sitrifor.ru/tools/price-calculator/
+- https://sitrifor.ru/guides/
+- https://sitrifor.ru/news
+- https://sitrifor.ru/about
+- https://sitrifor.ru/marketplace
+- https://sitrifor.ru/partners
+- https://sitrifor.ru/support/
+
+## Optional
+
+- https://sitrifor.ru/guides/cartridges/
+- https://sitrifor.ru/guides/machines/
+- https://sitrifor.ru/guides/consumables/
+- https://sitrifor.ru/guides/studio/
+- https://sitrifor.ru/guides/education/
+- https://sitrifor.ru/privacy/
+- https://sitrifor.ru/634/privacy

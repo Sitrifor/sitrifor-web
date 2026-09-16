@@ -126,6 +126,18 @@ function auditHtml(urlPath, html) {
   const appShotBad = /\/img\/app\/real\/[^"]+"[^>]*width="800" height="800"/.test(html);
   check(checks, `${pageId}:phone_shot_dims`, !appShotBad, 'App /img/app/real/ shots not defaulted to 800×800');
 
+  // Carousel shots must declare kind (--phone|--square|--wide)
+  const shotFigs = html.match(/<figure class="home-seo__shot[^"]*"/g) || [];
+  const shotMissingKind = shotFigs.filter((c) => !/home-seo__shot--(phone|square|wide)/.test(c));
+  check(
+    checks,
+    `${pageId}:shots_have_kind`,
+    shotMissingKind.length === 0,
+    shotMissingKind.length
+      ? `Carousel shots without kind modifier: ${shotMissingKind.length}`
+      : 'All .home-seo__shot have --phone/--square/--wide'
+  );
+
   return checks;
 }
 
@@ -149,6 +161,8 @@ async function liveContrastChecks(urlPath) {
     const metrics = await page.evaluate(() => {
       const btns = [...document.querySelectorAll('.guide-hero__cta a, .guide-hero__cta .btn')];
       const medias = [...document.querySelectorAll('.home-seo__media img')];
+      const shotsRail = document.querySelector('.home-seo__shots');
+      const shotFigs = [...document.querySelectorAll('.home-seo__shot')];
       const vh = window.innerHeight;
       const body = getComputedStyle(document.body);
       const headerTitle = document.querySelector('.header__page-title');
@@ -156,6 +170,22 @@ async function liveContrastChecks(urlPath) {
       const copy = document.querySelector('.home-seo__copy p');
       const h1 = document.querySelector('.guide-hero__title, h1');
       const ff = (el) => (el ? getComputedStyle(el).fontFamily : null);
+      const shotsAlign = shotsRail ? getComputedStyle(shotsRail).alignItems : null;
+      const shotLayout = shotFigs.map((fig) => {
+        const img = fig.querySelector('img');
+        const cap = fig.querySelector('figcaption');
+        if (!img) return null;
+        const ir = img.getBoundingClientRect();
+        const cr = cap ? cap.getBoundingClientRect() : null;
+        const gap = cr ? Math.round(cr.top - ir.bottom) : null;
+        return {
+          kind: [...fig.classList].find((c) => c.startsWith('home-seo__shot--')) || 'none',
+          imgH: Math.round(ir.height),
+          imgW: Math.round(ir.width),
+          pctVh: Math.round((100 * ir.height) / vh),
+          captionGapPx: gap
+        };
+      }).filter(Boolean);
       return {
         typography: {
           body: body.fontFamily,
@@ -182,7 +212,9 @@ async function liveContrastChecks(urlPath) {
             h: Math.round(r.height),
             pctVh: Math.round((100 * r.height) / vh)
           };
-        })
+        }),
+        shotsAlign,
+        shotLayout
       };
     });
     await browser.close();
@@ -245,6 +277,37 @@ async function liveContrastChecks(urlPath) {
       );
     }
 
+    if (metrics.shotLayout && metrics.shotLayout.length) {
+      const alignOk =
+        !metrics.shotsAlign ||
+        /^(flex-)?start$|^normal$|^initial$|^baseline$/i.test(String(metrics.shotsAlign).trim());
+      // normal on flex = stretch in older browsers; require explicit flex-start/start
+      const alignStrict = /^(flex-)?start$/i.test(String(metrics.shotsAlign || '').trim());
+      check(
+        checks,
+        `${urlPath}:shots_align_start`,
+        alignStrict,
+        `.home-seo__shots align-items must be flex-start/start (got: ${metrics.shotsAlign})`
+      );
+      for (const s of metrics.shotLayout) {
+        check(
+          checks,
+          `${urlPath}:shot_vh:${s.kind}`,
+          s.pctVh <= 45,
+          `Carousel shot ${s.kind} height ${s.imgH}px = ${s.pctVh}% vh (max 45%)`
+        );
+        if (s.captionGapPx != null) {
+          check(
+            checks,
+            `${urlPath}:shot_caption_gap:${s.kind}`,
+            s.captionGapPx >= 0 && s.captionGapPx <= 28,
+            `Caption gap under ${s.kind} is ${s.captionGapPx}px (expect ≤28; stretch/gap bug if large)`
+          );
+        }
+      }
+      void alignOk;
+    }
+
     return checks;
   } catch (e) {
     check(checks, `${urlPath}:live_metrics`, true, `skipped live: ${String(e.message || e).slice(0, 140)}`);
@@ -267,7 +330,7 @@ async function main() {
     all.push(...staticChecks);
 
     // Live checks only for representative pages (speed)
-    const liveTargets = ['/634/', '/guides/aftercare/', '/guides/pigments/'];
+    const liveTargets = ['/634/', '/guides/aftercare/', '/guides/pigments/', '/guides/studio/'];
     let live = [];
     if (liveTargets.includes(urlPath)) {
       live = await liveContrastChecks(urlPath);
@@ -288,6 +351,24 @@ async function main() {
   check(all, 'css:guides_btn_ghost_light', /\.btn--ghost[\s\S]{0,120}color:\s*var\(--color-text/.test(guidesCss), 'guides.css ghost uses light text');
   check(all, 'css:media_phone_cap', /home-seo__media--phone[\s\S]{0,200}max-height/.test(seoCss), 'seo-content.css caps phone media height');
   check(all, 'css:media_no_fullbleed_default', !/\.home-seo__media img\s*\{[^}]*width:\s*100%[^}]*max-width:\s*36rem/.test(seoCss), 'Default media is not full-bleed 36rem');
+  check(
+    all,
+    'css:shots_align_start',
+    /\.home-seo__shots\s*\{[^}]*align-items:\s*(flex-)?start/.test(seoCss),
+    '.home-seo__shots uses align-items: flex-start (no stretch caption float)'
+  );
+  check(
+    all,
+    'css:shot_phone_cap',
+    /\.home-seo__shot--phone\s+img\s*\{[^}]*max-height/.test(seoCss),
+    '.home-seo__shot--phone img has max-height cap'
+  );
+  check(
+    all,
+    'css:shot_square_aspect',
+    /\.home-seo__shot--square\s+img\s*\{[^}]*aspect-ratio:\s*1/.test(seoCss),
+    '.home-seo__shot--square img uses aspect-ratio 1'
+  );
 
   // Base site typography must live in main.css so hubs without yandex-business still get Inter
   const mainCss = fs.readFileSync(path.join(PUBLIC, 'css/main.css'), 'utf8');

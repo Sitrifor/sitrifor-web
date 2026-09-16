@@ -3,10 +3,13 @@
 - [x] `seo/.env` from `.env.example`
 - [x] IndexNow key in `.env` + `public/<key>.txt` (live ping OK)
 - [x] Daily cron installed (`npm run cron:install`)
-- [ ] Яндекс.Вебмастер: site added + verified
-- [ ] `YANDEX_VERIFICATION` meta/DNS in `.env` (+ HTML meta if needed)
-- [ ] Яндекс.Метрика counter → `YANDEX_METRIKA_ID` + snippet in HTML
-- [ ] Google Search Console property for `sitrifor.ru`
-- [ ] `credentials/gsc-service-account.json` + user invite in GSC
+- [x] Яндекс.Вебмастер: site verified (DNS), host `OK`, OAuth API
+- [x] Яндекс.Метрика `111332527` + snippet
+- [x] `public/llms.txt` live
+- [x] Google Search Console Domain `sitrifor.ru` (`GSC_SITE_URL=sc-domain:sitrifor.ru`)
+- [x] `credentials/gsc-service-account.json` + Full user in GSC
+- [ ] Bing Webmaster site + sitemaps (see `seo/docs/bing-webmaster-setup.md`)
 - [ ] Optional: `GA4_MEASUREMENT_ID`
-- [ ] Optional: `YANDEX_OAUTH_TOKEN` for Webmaster API
+
+GSC playbook: `seo/docs/gsc-cabinet-playbook.md`  
+Weekly: `seo/docs/weekly-seo-runbook.md`

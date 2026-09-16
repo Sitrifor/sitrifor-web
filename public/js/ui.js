@@ -1,6 +1,26 @@
 (function (global) {
   'use strict';
 
+  // Non-blocking webfonts (was @import in tokens.css - blocked LCP).
+  (function loadFonts() {
+    if (document.getElementById('sf-fonts')) return;
+    var pre1 = document.createElement('link');
+    pre1.rel = 'preconnect';
+    pre1.href = 'https://fonts.googleapis.com';
+    document.head.appendChild(pre1);
+    var pre2 = document.createElement('link');
+    pre2.rel = 'preconnect';
+    pre2.href = 'https://fonts.gstatic.com';
+    pre2.crossOrigin = 'anonymous';
+    document.head.appendChild(pre2);
+    var link = document.createElement('link');
+    link.id = 'sf-fonts';
+    link.rel = 'stylesheet';
+    link.href =
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap';
+    document.head.appendChild(link);
+  })();
+
   var stack = null;
 
   function ensureStack() {

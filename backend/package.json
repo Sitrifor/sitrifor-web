@@ -4,7 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "lawyer:index": "RUSLAW_ONLY_WIDE=1 node scripts/index-ruslawod.js",
+    "lawyer:enrich": "node scripts/enrich-ruslawod.js",
+    "lawyer:embed": "node scripts/embed-ruslawod.js",
+    "lawyer:eval": "node scripts/eval-lawyer.js"
   },
   "dependencies": {
     "@fastify/cors": "^10.0.2",

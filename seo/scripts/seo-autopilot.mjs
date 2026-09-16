@@ -307,7 +307,7 @@ async function siteProbe() {
   return results;
 }
 
-function gscHook() {
+async function gscHook() {
   const cred = path.join(SEO_ROOT, 'credentials/gsc-service-account.json');
   const checklist = path.join(REPORTS, 'gsc/README.md');
   if (!fs.existsSync(cred)) {
@@ -317,7 +317,38 @@ function gscHook() {
       note: 'Place service account JSON at seo/credentials/gsc-service-account.json then re-run autopilot'
     };
   }
-  return { status: 'credentials_present', path: cred, action: 'run npm run gsc -- sites' };
+  if (dry) {
+    return { status: 'credentials_present', dry: true, path: cred };
+  }
+  loadEnvFile();
+  const { spawnSync } = await import('child_process');
+  const py = path.join(SEO_ROOT, '.venv/bin/python');
+  const script = path.join(SEO_ROOT, 'scripts/gsc_client.py');
+  const r = spawnSync(py, [script, 'report'], {
+    cwd: SEO_ROOT,
+    encoding: 'utf8',
+    env: process.env,
+    timeout: 180000
+  });
+  const latest = path.join(REPORTS, 'gsc/status-latest.json');
+  let need = [];
+  if (fs.existsSync(latest)) {
+    try {
+      const j = JSON.parse(fs.readFileSync(latest, 'utf8'));
+      need = j.needRequestIndexing || [];
+    } catch {
+      /* ignore */
+    }
+  }
+  return {
+    status: r.status === 0 ? 'report_ok' : 'report_failed',
+    path: cred,
+    exitCode: r.status,
+    stderr: (r.stderr || '').slice(0, 500),
+    stdout: (r.stdout || '').slice(0, 800),
+    needRequestIndexing: need,
+    latest
+  };
 }
 
 async function yandexHook() {
@@ -489,8 +520,8 @@ async function main() {
   report.steps.push('indexnow');
 
   // 10) GSC / Yandex hooks (no fake access)
-  report.gsc = gscHook();
-  report.yandex = yandexHook();
+  report.gsc = await gscHook();
+  report.yandex = await yandexHook();
   report.steps.push('webmaster_hooks');
 
   report.finishedAt = new Date().toISOString();

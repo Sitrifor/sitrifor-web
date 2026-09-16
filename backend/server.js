@@ -33,6 +33,7 @@ import { composeMagazineLayout, magazineEnabled } from './news-magazine.js';
 import { renderArticleSsr, renderNotFoundSsr } from './news-seo/index.js';
 
 const marketplaceApi = await import('./marketplace/index.js');
+import { registerLawyerRoutes } from './lawyer.js';
 
 const PORT = Number(process.env.PORT || 8081);
 const HOST = process.env.HOST || '127.0.0.1';
@@ -386,6 +387,9 @@ app.get('/news/a/:slug', async (request, reply) => {
     }
   }
   const page = renderArticleSsr(item);
+  if (lang !== 'ru') {
+    reply.header('X-Robots-Tag', 'noindex, follow');
+  }
   return reply
     .code(page.status)
     .type(page.contentType)
@@ -526,6 +530,8 @@ app.get('/api/marketplace/products/:slug', async (request, reply) => {
   if (!item) return reply.code(404).send({ error: 'not_found' });
   return item;
 });
+
+registerLawyerRoutes(app);
 
 try {
   await app.listen({ port: PORT, host: HOST });

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node .cursor/hooks/protect-yandex-secrets.mjs",
+        "failClosed": true
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": "node .cursor/hooks/protect-yandex-secrets.mjs",
+        "failClosed": true
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node .cursor/hooks/protect-yandex-secrets.mjs",
+        "matcher": "Shell|Read",
+        "failClosed": true
+      }
+    ]
+  }
+}

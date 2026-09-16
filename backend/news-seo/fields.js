@@ -102,6 +102,21 @@ export function buildJsonLd(article, seo, links) {
   };
 }
 
+/** Thin / duplicate news that should not compete with hubs in search. */
+export function shouldNoindexNews(article = {}) {
+  const lang = String(article.displayLang || article.lang || 'ru').slice(0, 2);
+  if (lang && lang !== 'ru') return true;
+  const title = String(article.title || article.titleOriginal || '');
+  if (/принесут удачу|родившимся\s*\d{2}\.\d{2}|гороскоп/i.test(title)) return true;
+  const type = String(article.articleType || '');
+  if (type === 'birthday_tattoo' || type === 'birthday') return true;
+  const reasons = Array.isArray(article.usefulReasons)
+    ? article.usefulReasons.join(' ')
+    : String(article.usefulReasons || article.useful_reasons || '');
+  if (/format:birthday|birthday_tattoo|bday-\d{2}-\d{2}/i.test(reasons)) return true;
+  return false;
+}
+
 export function buildSeoPackage(article, { internalLinks = [], injectBody = null } = {}) {
   const title = buildSeoTitle(article);
   const description = buildSeoDescription(article);
@@ -114,7 +129,7 @@ export function buildSeoPackage(article, { internalLinks = [], injectBody = null
     imageAlt,
     ogImage,
     optimizedAt,
-    robots: 'index, follow',
+    robots: shouldNoindexNews(article) ? 'noindex, follow' : 'index, follow',
     ogTitle: title,
     ogDescription: description,
     twitterCard: 'summary_large_image',
@@ -129,7 +144,7 @@ export function buildSeoPackage(article, { internalLinks = [], injectBody = null
     seoOptimizedAt: optimizedAt,
     body: injectBody,
     meta: {
-      robots: 'index, follow',
+      robots: shouldNoindexNews(article) ? 'noindex, follow' : 'index, follow',
       ogTitle: title,
       ogDescription: description,
       ogImage,

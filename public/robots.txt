@@ -5,4 +5,10 @@ Disallow: /api/
 Host: sitrifor.ru
 Sitemap: https://sitrifor.ru/sitemap.xml
 Sitemap: https://sitrifor.ru/sitemap-news.xml
-Sitemap: https://sitrifor.ru/sitemap-marketplace.xml
+# Sitemap marketplace paused for crawl focus (file still at /sitemap-marketplace.xml)
+
+# Locale copies of news: RU canonical without ?lang=
+Disallow: /*?lang=en
+Disallow: /*?lang=de
+
+# AI / LLM context: https://sitrifor.ru/llms.txt

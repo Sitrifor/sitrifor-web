@@ -2,6 +2,8 @@
  * SEO QA gate: refuse seo_ready if shell/canonical/title still wrong.
  */
 
+import { shouldNoindexNews } from './fields.js';
+
 const SITE = 'https://sitrifor.ru';
 
 export function qaSeoArticle(article, { htmlSnippet = null } = {}) {
@@ -22,7 +24,9 @@ export function qaSeoArticle(article, { htmlSnippet = null } = {}) {
   if (canonical === `${SITE}/news` || /\/news\/?$/.test(canonical)) reasons.push('canonical_is_feed');
   if (body.length < 120) reasons.push('body_too_thin');
   if (/Загрузка…|Загрузка\.\.\./i.test(body)) reasons.push('body_is_loading_shell');
-  if (seo.robots && !/index/i.test(seo.robots)) reasons.push('robots_noindex');
+  if (seo.robots && !/index/i.test(seo.robots) && !shouldNoindexNews(article)) {
+    reasons.push('robots_noindex');
+  }
   if (!seo.imageAlt && !article.imageUrl) {
     /* ok - no image */
   } else if (article.imageUrl && !(seo.imageAlt || '').trim()) {

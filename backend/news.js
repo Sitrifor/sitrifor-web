@@ -924,7 +924,7 @@ export function listRecentSlugs(limit = 100) {
 /** All published article URLs for sitemap / SEO backfill. */
 export function listPublishedForSitemap({ limit = 5000 } = {}) {
   return db.prepare(`
-    SELECT id, slug, day, published_at, title, seo_ready, seo_optimized_at
+    SELECT id, slug, day, published_at, title, seo_ready, seo_optimized_at, useful_reasons
     FROM articles
     WHERE published = 1
     ORDER BY published_at DESC

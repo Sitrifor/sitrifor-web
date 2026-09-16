@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SECRET_NAMES, getSecret, hasSecret } from './yandex-disk/secrets.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SEO_ROOT = path.resolve(__dirname, '..');
@@ -37,6 +38,10 @@ function loadEnv() {
 }
 
 function readToken(env) {
+  if (hasSecret(SECRET_NAMES.webmasterToken)) {
+    const t = getSecret(SECRET_NAMES.webmasterToken).trim();
+    if (t) return t;
+  }
   if (env.YANDEX_OAUTH_TOKEN) return env.YANDEX_OAUTH_TOKEN;
   const p = path.join(SEO_ROOT, 'credentials/yandex-webmaster-token.txt');
   if (fs.existsSync(p)) return fs.readFileSync(p, 'utf8').trim();
@@ -111,9 +116,8 @@ function priorityUrls() {
   ];
   const hubs = sitemapLocs('sitemap.xml', 30);
   const news = sitemapLocs('sitemap-news.xml', 12);
-  const products = sitemapLocs('sitemap-marketplace.xml', 20).filter((u) =>
-    u.includes('/marketplace/p/')
-  );
+  // Marketplace product recrawl paused with sitemap (crawl focus on hubs/news).
+  const products = [];
   const seen = new Set();
   const out = [];
   for (const u of [...core, ...hubs, ...news, ...products]) {
@@ -125,19 +129,20 @@ function priorityUrls() {
 }
 
 async function ensureSitemaps(token, userId, hostId) {
+  // Marketplace sitemap paused for crawl focus on young domain (file stays public).
   const wanted = [
     'https://sitrifor.ru/sitemap.xml',
-    'https://sitrifor.ru/sitemap-news.xml',
-    'https://sitrifor.ru/sitemap-marketplace.xml'
+    'https://sitrifor.ru/sitemap-news.xml'
   ];
+  const paused = new Set(['https://sitrifor.ru/sitemap-marketplace.xml']);
   const list = await yw(token, 'GET', `/user/${userId}/hosts/${hostId}/user-added-sitemaps`);
-  const have = new Set(
-    ((list.json && list.json.sitemaps) || []).map((s) => s.sitemap_url)
-  );
+  const entries = (list.json && list.json.sitemaps) || [];
+  const byUrl = new Map(entries.map((s) => [s.sitemap_url, s]));
   const added = [];
   const skipped = [];
+  const removed = [];
   for (const url of wanted) {
-    if (have.has(url)) {
+    if (byUrl.has(url)) {
       skipped.push(url);
       continue;
     }
@@ -150,7 +155,27 @@ async function ensureSitemaps(token, userId, hostId) {
     });
     added.push({ url, status: r.status, body: r.json });
   }
-  return { have: [...have], added, skipped, listStatus: list.status };
+  for (const url of paused) {
+    const entry = byUrl.get(url);
+    if (!entry) continue;
+    if (dry) {
+      removed.push({ url, sitemapId: entry.sitemap_id, dry: true });
+      continue;
+    }
+    const r = await yw(
+      token,
+      'DELETE',
+      `/user/${userId}/hosts/${hostId}/user-added-sitemaps/${encodeURIComponent(entry.sitemap_id)}`
+    );
+    removed.push({ url, sitemapId: entry.sitemap_id, status: r.status, body: r.json });
+  }
+  return {
+    have: entries.map((s) => s.sitemap_url),
+    added,
+    skipped,
+    removed,
+    listStatus: list.status
+  };
 }
 
 async function indexNowYandex(env, urls) {

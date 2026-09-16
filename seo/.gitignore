@@ -8,3 +8,4 @@ credentials/*
 .env
 *.log
 .lighthouseci/
+data/

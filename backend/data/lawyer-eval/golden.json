@@ -1,0 +1,115 @@
+[
+  {
+    "id": "admin-contempt-appeal",
+    "question": "Как обжаловать штраф?",
+    "context": "Высказала на эмоциях судье, что она дура, получила штраф за неуважение к СУДу",
+    "expect": {
+      "jurisdiction": "admin",
+      "mustDocNumbers": ["195-ФЗ"],
+      "forbidHeadingRe": ["наркотич", "осаго", "чернобыл", "олимпий"],
+      "answerMustInclude": ["штраф получили вы"],
+      "answerMustNotInclude": ["судья получила штраф", "Судья выразила"],
+      "minConfidence": 0.5,
+      "refuse": false
+    }
+  },
+  {
+    "id": "criminal-sizo-228",
+    "question": "Как выйти на подписку о невыезде?",
+    "context": "Муж в СИЗО по статье 228",
+    "expect": {
+      "jurisdiction": "criminal",
+      "forbidHeadingRe": ["осаго", "сизова"],
+      "answerMustInclude": ["УПК"],
+      "minConfidence": 0.45,
+      "refuse": false
+    }
+  },
+  {
+    "id": "tax-usn",
+    "question": "Какие ограничения по УСН?",
+    "context": "ИП на упрощёнке, оборот растёт",
+    "expect": {
+      "jurisdiction": "tax",
+      "mustHeadingRe": ["упрощенн"],
+      "minConfidence": 0.45,
+      "refuse": false
+    }
+  },
+  {
+    "id": "labor-dismissal",
+    "question": "Что делать при увольнении без приказа?",
+    "context": "Работодатель уволил устно и не выплатил зарплату",
+    "expect": {
+      "jurisdiction": "labor",
+      "mustHeadingRe": ["трудов"],
+      "minConfidence": 0.45,
+      "refuse": false
+    }
+  },
+  {
+    "id": "privacy-clients",
+    "question": "Можно ли передавать данные клиентов подрядчику?",
+    "context": "Студия ведёт базу клиентов с телефонами",
+    "expect": {
+      "jurisdiction": "privacy",
+      "mustDocNumbers": ["152-ФЗ"],
+      "minConfidence": 0.45,
+      "refuse": false
+    }
+  },
+  {
+    "id": "consumer-return",
+    "question": "Можно ли вернуть бракованный товар без чека?",
+    "context": "Купила телефон в магазине, через неделю не включается",
+    "expect": {
+      "jurisdiction": "consumer",
+      "mustHeadingRe": ["потребител"],
+      "minConfidence": 0.4,
+      "refuse": false
+    }
+  },
+  {
+    "id": "civil-rent",
+    "question": "Как расторгнуть договор аренды помещения?",
+    "context": "Арендую нежилое помещение, хочу выйти досрочно",
+    "expect": {
+      "jurisdiction": "civil",
+      "mustHeadingRe": ["аренд|гражданск"],
+      "minConfidence": 0.4,
+      "refuse": false
+    }
+  },
+  {
+    "id": "vague-refuse",
+    "question": "что делать?",
+    "context": "всё плохо",
+    "expect": {
+      "refuse": true,
+      "maxSources": 0
+    }
+  },
+  {
+    "id": "noise-not-drug-order",
+    "question": "Как обжаловать постановление о штрафе?",
+    "context": "Оштрафовали за неуважение к суду после срыва заседания",
+    "expect": {
+      "jurisdiction": "admin",
+      "mustDocNumbers": ["195-ФЗ"],
+      "forbidHeadingRe": ["наркоман", "реабилитац", "диагностик"],
+      "minConfidence": 0.5,
+      "refuse": false
+    }
+  },
+  {
+    "id": "role-guard-fine",
+    "question": "Кто получил штраф в этой ситуации и что делать?",
+    "context": "На эмоциях назвала судью дурой и получила штраф",
+    "expect": {
+      "jurisdiction": "admin",
+      "answerMustInclude": ["штраф получили вы"],
+      "answerMustNotInclude": ["штраф получила судья"],
+      "refuse": false
+    }
+  }
+]

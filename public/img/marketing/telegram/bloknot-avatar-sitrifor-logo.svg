@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#111114"/>
+
+  <!-- spiral rings -->
+  <g fill="#111114" stroke="#FFD60A" stroke-width="14" stroke-linecap="round">
+    <line x1="268" y1="320" x2="318" y2="320"/>
+    <line x1="268" y1="420" x2="318" y2="420"/>
+    <line x1="268" y1="520" x2="318" y2="520"/>
+    <line x1="268" y1="620" x2="318" y2="620"/>
+  </g>
+  <!-- thicker ring bodies as rounded rects for icon look -->
+  <g fill="#111114">
+    <rect x="262" y="302" width="56" height="36" rx="18"/>
+    <rect x="262" y="402" width="56" height="36" rx="18"/>
+    <rect x="262" y="502" width="56" height="36" rx="18"/>
+    <rect x="262" y="602" width="56" height="36" rx="18"/>
+  </g>
+
+  <!-- notebook body -->
+  <rect x="300" y="200" width="460" height="640" rx="48" ry="48" fill="#FFD60A" stroke="#111114" stroke-width="28"/>
+
+  <!-- page stack at top -->
+  <path d="M348 200
+           L348 168
+           Q348 148 368 148
+           L692 148
+           Q712 148 712 168
+           L712 200
+           Z" fill="#F5F0E6" stroke="#111114" stroke-width="28" stroke-linejoin="round"/>
+  <!-- cover overlaps bottom of pages -->
+  <rect x="300" y="200" width="460" height="56" fill="#FFD60A"/>
+
+  <!-- re-draw top of cover outline -->
+  <path d="M314 228 L746 228" stroke="#111114" stroke-width="0" fill="none"/>
+
+  <!-- Sitrifor logo mark centered on cover (scaled from 36x36 viewBox) -->
+  <g transform="translate(386 360) scale(7)">
+    <path d="M26 8C26 8 20 6 14 10C8 14 8 22 14 26C20 30 26 28 26 28"
+          fill="none" stroke="#111114" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 18C10 18 14 14 22 14C30 14 30 22 22 22C14 22 10 18 10 18"
+          fill="none" stroke="#111114" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

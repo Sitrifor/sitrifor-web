@@ -184,6 +184,7 @@
 
 .home-seo__shots {
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
   overflow-x: auto;
   padding: 0.25rem 0 0.75rem;
@@ -193,23 +194,44 @@
 
 .home-seo__shot {
   margin: 0;
-  flex: 0 0 156px;
-  width: 156px;
-  display: grid;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
-  justify-items: center;
+  justify-content: flex-start;
   text-align: center;
   scroll-snap-align: start;
 }
 
+.home-seo__shot--square {
+  width: 156px;
+}
+
+.home-seo__shot--wide {
+  width: 220px;
+}
+
+.home-seo__shot--phone {
+  width: 120px;
+}
+
 @media (min-width: 600px) {
-  .home-seo__shot {
-    flex-basis: 180px;
+  .home-seo__shot--square {
     width: 180px;
+  }
+
+  .home-seo__shot--wide {
+    width: 240px;
+  }
+
+  .home-seo__shot--phone {
+    width: 140px;
   }
 }
 
 .home-seo__shot img {
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -217,10 +239,43 @@
   background: #111114;
 }
 
+.home-seo__shot--square img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  max-height: 180px;
+}
+
+.home-seo__shot--wide img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  max-height: 160px;
+}
+
+.home-seo__shot--phone img {
+  width: 100%;
+  height: auto;
+  max-height: min(280px, 40vh);
+  object-fit: contain;
+  background: transparent;
+  border-radius: 16px;
+}
+
+/* Fallback when kind class missing: keep captions under media, cap height */
+.home-seo__shot:not([class*="home-seo__shot--"]) {
+  width: 156px;
+}
+
+.home-seo__shot:not([class*="home-seo__shot--"]) img {
+  max-height: min(200px, 36vh);
+  object-fit: contain;
+}
+
 .home-seo__shot figcaption {
+  margin: 0;
   font-size: 0.86rem;
   font-weight: 700;
   color: var(--color-text-secondary, rgba(255, 255, 255, 0.56));
+  line-height: 1.25;
 }
 
 .guide-main__intro {

@@ -214,6 +214,107 @@
   color: var(--color-text-secondary);
 }
 
+.app634-shots__hint {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+/* Horizontal swipe gallery (mobile + desktop) */
+.app634-shot-rail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0.25rem 0 0.75rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 214, 10, 0.45) transparent;
+}
+
+.app634-shot-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.app634-shot-rail::-webkit-scrollbar-thumb {
+  background: rgba(255, 214, 10, 0.4);
+  border-radius: 999px;
+}
+
+.app634-shot {
+  flex: 0 0 auto;
+  width: min(62vw, 220px);
+  margin: 0;
+  scroll-snap-align: start;
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.app634-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid var(--color-line);
+  background: #111114;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.app634-shot figcaption {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .app634-shot {
+    width: 200px;
+  }
+
+  .app634-shot-rail {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 719px) {
+  /* Full-bleed swipe past container padding */
+  .app634-shots {
+    overflow: visible;
+  }
+
+  .app634-shot-rail {
+    width: calc(100% + 2 * var(--container-pad, 16px));
+    max-width: none;
+    margin-left: calc(-1 * var(--container-pad, 16px));
+    margin-right: calc(-1 * var(--container-pad, 16px));
+    padding-left: var(--container-pad, 16px);
+    padding-right: var(--container-pad, 16px);
+    scroll-padding-inline: var(--container-pad, 16px);
+  }
+
+  .app634-shots__hint {
+    display: block;
+  }
+}
+
 .app634-utp {
   list-style: none;
   margin: 0;

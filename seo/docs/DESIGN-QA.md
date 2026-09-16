@@ -77,6 +77,13 @@ Source of truth also mirrored in Cursor rules:
 - Prefer one hero visual + one `.home-seo__shots` carousel. Section `shot` only if unique and sized; budget ≤ 2 section media per page.
 - Live gate: any `.home-seo__media img` ≤ 45% of viewport height.
 
+### P0 - carousel `.home-seo__shots` (mixed square + phone)
+- Builder must emit `.home-seo__shot--phone|square|wide` (not bare `.home-seo__shot`).
+- `.home-seo__shots { align-items: flex-start }` - **never** default stretch. Stretch makes captions float under short squares next to a tall phone.
+- Phone in carousel: narrow width (~120–140px), `max-height: min(280px, 40vh)`, `object-fit: contain`.
+- Square in carousel: fixed tile ~156–180px, `aspect-ratio: 1`, caption directly under image (gap ≤ ~0.5rem / ≤28px live).
+- Live gate (`guides:qa` on `/guides/studio/`): `align-items` start; each shot caption gap ≤ 28px; shot height ≤ 45vh.
+
 ### P1 - duplication and rhythm
 - Do not repeat the same app screen in hero + carousel + section media.
 - UTP is open list with yellow keys - not heavy card tiles.
@@ -84,6 +91,7 @@ Source of truth also mirrored in Cursor rules:
 
 ### P1 - builder
 - `seo/scripts/build-hubs.mjs` must emit media kind modifiers (`--phone|--square|--wide`) and correct intrinsic width/height (phone 473×1024, not 800×800).
+- Same for carousel shots via `shotKind` / `home-seo__shot--*`.
 - Bump `ASSET_V.guidesCss` / `seoContent` when CSS changes.
 
 ### QA gate failures (guides:qa)
@@ -92,9 +100,13 @@ Fails when any of:
 - `main.css` missing `body { font-family: var(--g-font-family) }`
 - `btn` used without guides/yandex button CSS linked
 - section media without kind modifier
+- carousel shots without `--phone|--square|--wide`
 - >2 section media figures
 - key-highlight over budget
 - em-dash present
 - live CTA contrast < 4.5
 - live section media > 45% viewport height
+- live shots rail not `align-items: flex-start|start`
+- live shot caption gap > 28px (stretch / layout float)
 - guides.css missing brand/ghost button rules or phone max-height cap
+- seo-content.css missing shots align-start / shot--phone max-height / shot--square aspect-ratio

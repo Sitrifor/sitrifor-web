@@ -35,7 +35,22 @@ if (!key) {
   process.exit(1);
 }
 
-const paths = process.argv.slice(2);
+const rawArgs = process.argv.slice(2);
+const paths = [];
+for (let i = 0; i < rawArgs.length; i++) {
+  const a = rawArgs[i];
+  if (a === "--urls" && rawArgs[i + 1]) {
+    paths.push(
+      ...rawArgs[++i]
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean)
+    );
+    continue;
+  }
+  if (a.startsWith("--")) continue;
+  paths.push(a);
+}
 const urlList =
   paths.length > 0
     ? paths.map((p) => (p.startsWith("http") ? p : origin + (p.startsWith("/") ? p : `/${p}`)))
@@ -47,6 +62,9 @@ const urlList =
         `${origin}/exclusive`,
         `${origin}/privacy/`,
         `${origin}/support/`,
+        `${origin}/634/`,
+        `${origin}/guides/`,
+        `${origin}/guides/aftercare/`,
       ];
 
 const body = {

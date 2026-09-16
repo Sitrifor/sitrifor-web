@@ -11,6 +11,7 @@ alwaysApply: false
 ## Builder (`build-hubs.mjs`)
 
 - Эмитить `.home-seo__media--phone|square|wide` и реальные width/height (phone 473×1024).
+- Карусель: `.home-seo__shot--phone|square|wide` + CSS `align-items: flex-start` (иначе подписи «плывут» у квадратов рядом с phone).
 - Не дефолтить 800×800 на портреты.
 - Section `shot` sparingly (≤2/page); основной визуал - `heroShot` + `shots` carousel.
 - После правок CSS: bump `ASSET_V.guidesCss` / `seoContent`, затем `npm run hubs:build` и `npm run guides:qa`.
